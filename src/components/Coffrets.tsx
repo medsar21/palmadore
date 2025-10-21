@@ -7,21 +7,21 @@ import coffretLarge from "@/assets/coffret-large.jpg";
 
 const coffrets = [
   {
-    id: 1,
+    id: 20,
     name: "Volupté - 450 Grs",
     price: "700.00 Dhs",
     description: "plateau en cuir bicolore (petit)",
     image: coffretSmall,
   },
   {
-    id: 2,
+    id: 21,
     name: "Volupté - 1kg",
     price: "1500.00 Dhs",
     description: "plateau en cuir bicolore (moyen)",
     image: coffretMedium,
   },
   {
-    id: 3,
+    id: 22,
     name: "Volupté - 2kg",
     price: "2600.00 Dhs",
     description: "plateau en cuir bicolore (grand)",
@@ -70,12 +70,17 @@ const Coffrets = () => {
                   {coffret.description}
                 </p>
                 <div className="flex gap-2 justify-center">
-                  <Button variant="outline" size="sm">
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => navigate(`/product/${coffret.id}`)}
+                  >
                     Détail
                   </Button>
                   <Button
                     size="sm"
                     className="bg-chocolate text-white hover:bg-chocolate/90"
+                    onClick={() => navigate(`/product/${coffret.id}?order=true`)}
                   >
                     Commander
                   </Button>

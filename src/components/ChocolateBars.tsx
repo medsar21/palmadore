@@ -16,7 +16,11 @@ const ChocolateBars = () => {
   const navigate = useNavigate();
 
   const handleDiscoverClick = () => {
-    navigate('/products');
+    navigate('/products?category=tablettes');
+  };
+
+  const handleBarClick = () => {
+    navigate('/products?category=tablettes');
   };
 
   return (
@@ -35,8 +39,9 @@ const ChocolateBars = () => {
           {bars.map((bar, index) => (
             <div
               key={bar.id}
-              className="group animate-scale-in"
+              className="group animate-scale-in cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={handleBarClick}
             >
               <div className="relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300">
                 <img

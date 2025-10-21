@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +14,9 @@ import coupeAudaceGold from "@/assets/coupe-audace-gold.jpg";
 import coupeAudaceGreen from "@/assets/coupe-audace-green.jpg";
 import coupeEmpreinteCopper from "@/assets/coupe-empreinte-copper.jpg";
 import coupeEmpreinteSilver from "@/assets/coupe-empreinte-silver.jpg";
+import coffretSmall from "@/assets/coffret-small.jpg";
+import coffretMedium from "@/assets/coffret-medium.jpg";
+import coffretLarge from "@/assets/coffret-large.jpg";
 
 // Base de données des produits (même que ProductsPage)
 const allProducts = [
@@ -155,11 +158,58 @@ const allProducts = [
     rating: 4.6,
     reviews: 134
   },
+  // Coffrets
+  {
+    id: 20,
+    name: "Volupté - 450 Grs",
+    description: "plateau en cuir bicolore (petit)",
+    price: "700.00 Dhs",
+    image: coffretSmall,
+    category: "coffrets",
+    tags: ["plateau", "cuir", "petit"],
+    fullDescription: "Notre coffret Volupté de 450g est parfait pour offrir ou se faire plaisir. Plateau en cuir bicolore de qualité supérieure, rempli d'une sélection raffinée de nos meilleurs chocolats artisanaux. Un cadeau élégant et gourmand.",
+    ingredients: "Assortiment de chocolats au lait, noir et blanc, ganaches variées",
+    weight: "450g",
+    allergens: "Contient du lait, peut contenir des traces de noix",
+    rating: 4.9,
+    reviews: 156
+  },
+  {
+    id: 21,
+    name: "Volupté - 1kg",
+    description: "plateau en cuir bicolore (moyen)",
+    price: "1500.00 Dhs",
+    image: coffretMedium,
+    category: "coffrets",
+    tags: ["plateau", "cuir", "moyen"],
+    fullDescription: "Le coffret Volupté 1kg offre une expérience chocolatée généreuse. Plateau en cuir bicolore artisanal rempli d'un assortiment premium de chocolats fins. Idéal pour les grandes occasions et les moments de partage.",
+    ingredients: "Assortiment varié de chocolats fins, pralinés, ganaches, caramels",
+    weight: "1kg",
+    allergens: "Contient du lait et des noix, peut contenir des traces de gluten",
+    rating: 5.0,
+    reviews: 89
+  },
+  {
+    id: 22,
+    name: "Volupté - 2kg",
+    description: "plateau en cuir bicolore (grand)",
+    price: "2600.00 Dhs",
+    image: coffretLarge,
+    category: "coffrets",
+    tags: ["plateau", "cuir", "grand"],
+    fullDescription: "Notre plus grand coffret Volupté de 2kg est une véritable célébration du chocolat. Magnifique plateau en cuir bicolore haut de gamme, garni d'une collection exceptionnelle de nos créations les plus raffinées. Le cadeau ultime pour les vrais amateurs.",
+    ingredients: "Collection complète de chocolats premium, truffes, pralinés nobles, ganaches d'exception",
+    weight: "2kg",
+    allergens: "Contient du lait, des noix et du gluten",
+    rating: 5.0,
+    reviews: 67
+  },
 ];
 
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [quantity, setQuantity] = useState(1);
   const [isPersonalized, setIsPersonalized] = useState(false);
   const [personalizationText, setPersonalizationText] = useState("");
@@ -172,6 +222,14 @@ const ProductDetails = () => {
   });
 
   const product = allProducts.find(p => p.id === parseInt(id || "0"));
+
+  // Ouvrir automatiquement le formulaire de commande si order=true dans l'URL
+  useEffect(() => {
+    const orderParam = searchParams.get('order');
+    if (orderParam === 'true') {
+      setShowOrderForm(true);
+    }
+  }, [searchParams]);
 
   if (!product) {
     return (
@@ -383,6 +441,118 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
+
+        {/* Section des suggestions de produits similaires */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-serif font-bold text-chocolate mb-8 text-center">
+            Vous aimerez aussi
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            {allProducts
+              .filter(p => p.category === product.category && p.id !== product.id)
+              .slice(0, 4)
+              .map((suggestedProduct) => (
+                <Card
+                  key={suggestedProduct.id}
+                  className="group overflow-hidden border-none shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer"
+                  onClick={() => navigate(`/product/${suggestedProduct.id}`)}
+                >
+                  <div className="relative overflow-hidden aspect-square bg-secondary/10">
+                    <img
+                      src={suggestedProduct.image}
+                      alt={suggestedProduct.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <CardContent className="p-3 sm:p-4">
+                    <h3 className="text-sm sm:text-base font-serif font-semibold text-chocolate mb-1 sm:mb-2 line-clamp-1">
+                      {suggestedProduct.name}
+                    </h3>
+                    <p 
+                      className="text-xs sm:text-sm text-muted-foreground mb-2 overflow-hidden"
+                      style={{
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                      }}
+                    >
+                      {suggestedProduct.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm sm:text-base font-bold text-copper">
+                        {suggestedProduct.price}
+                      </span>
+                      <Button
+                        size="sm"
+                        className="bg-chocolate hover:bg-chocolate/90 text-white text-xs sm:text-sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigate(`/product/${suggestedProduct.id}`);
+                        }}
+                      >
+                        Voir
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+          </div>
+          
+          {/* Si pas assez de produits dans la même catégorie, afficher d'autres produits */}
+          {allProducts.filter(p => p.category === product.category && p.id !== product.id).length === 0 && (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {allProducts
+                .filter(p => p.id !== product.id)
+                .slice(0, 4)
+                .map((suggestedProduct) => (
+                  <Card
+                    key={suggestedProduct.id}
+                    className="group overflow-hidden border-none shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer"
+                    onClick={() => navigate(`/product/${suggestedProduct.id}`)}
+                  >
+                    <div className="relative overflow-hidden aspect-square bg-secondary/10">
+                      <img
+                        src={suggestedProduct.image}
+                        alt={suggestedProduct.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                    <CardContent className="p-3 sm:p-4">
+                      <h3 className="text-sm sm:text-base font-serif font-semibold text-chocolate mb-1 sm:mb-2 line-clamp-1">
+                        {suggestedProduct.name}
+                      </h3>
+                      <p 
+                        className="text-xs sm:text-sm text-muted-foreground mb-2 overflow-hidden"
+                        style={{
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                        }}
+                      >
+                        {suggestedProduct.description}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm sm:text-base font-bold text-copper">
+                          {suggestedProduct.price}
+                        </span>
+                        <Button
+                          size="sm"
+                          className="bg-chocolate hover:bg-chocolate/90 text-white text-xs sm:text-sm"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(`/product/${suggestedProduct.id}`);
+                          }}
+                        >
+                          Voir
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Modal de commande */}
@@ -466,3 +636,4 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+

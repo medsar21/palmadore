@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -23,13 +23,13 @@ import coffretLarge from "@/assets/coffret-large.jpg";
 
 // Définition des catégories et produits
 const categories = [
-  { id: "all", name: "Tous les produits", color: "bg-gradient-to-r from-chocolate to-copper" },
-  { id: "chocolats", name: "Chocolats", color: "bg-gradient-to-r from-amber-600 to-orange-500" },
-  { id: "tablettes", name: "Tablettes", color: "bg-gradient-to-r from-yellow-600 to-amber-500" },
-  { id: "coupes", name: "Coupes", color: "bg-gradient-to-r from-purple-600 to-pink-500" },
-  { id: "coffrets", name: "Coffrets", color: "bg-gradient-to-r from-emerald-600 to-teal-500" },
-  { id: "boites", name: "Boîtes", color: "bg-gradient-to-r from-blue-600 to-indigo-500" },
-  { id: "truffes", name: "Truffes", color: "bg-gradient-to-r from-rose-600 to-pink-500" },
+  { id: "all", name: "Tous les produits" },
+  { id: "chocolats", name: "Chocolats" },
+  { id: "tablettes", name: "Tablettes" },
+  { id: "coupes", name: "Coupes" },
+  { id: "coffrets", name: "Coffrets" },
+  { id: "boites", name: "Boîtes" },
+  { id: "truffes", name: "Truffes" },
 ];
 
 const allProducts = [
@@ -213,30 +213,30 @@ const allProducts = [
   },
   {
     id: 20,
-    name: "Coffret Luxe",
-    description: "Coffret grand format - 36 pièces",
-    price: "450 Dhs",
-    image: coffretLarge,
+    name: "Volupté - 450 Grs",
+    description: "plateau en cuir bicolore (petit)",
+    price: "700.00 Dhs",
+    image: coffretSmall,
     category: "coffrets",
-    tags: ["luxe", "36 pièces"],
+    tags: ["plateau", "cuir"],
   },
   {
     id: 21,
-    name: "Coffret Gourmet",
-    description: "Coffret spécial gourmet - 20 pièces",
-    price: "380 Dhs",
-    image: coffretSmall,
+    name: "Volupté - 1kg",
+    description: "plateau en cuir bicolore (moyen)",
+    price: "1500.00 Dhs",
+    image: coffretMedium,
     category: "coffrets",
-    tags: ["gourmet", "spécial"],
+    tags: ["plateau", "cuir"],
   },
   {
     id: 22,
-    name: "Coffret Cadeau",
-    description: "Coffret cadeau élégant - 16 pièces",
-    price: "280 Dhs",
-    image: coffretMedium,
+    name: "Volupté - 2kg",
+    description: "plateau en cuir bicolore (grand)",
+    price: "2600.00 Dhs",
+    image: coffretLarge,
     category: "coffrets",
-    tags: ["cadeau", "élégant"],
+    tags: ["plateau", "cuir"],
   },
 
   // Boîtes
@@ -335,11 +335,20 @@ const allProducts = [
 ];
 
 const ProductsPage = () => {
+  const [searchParams] = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("default");
   const [currentPage, setCurrentPage] = useState(1);
   const navigate = useNavigate();
+
+  // Lire la catégorie depuis l'URL au chargement de la page
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [searchParams]);
 
   // Configuration de la pagination
   const productsPerPage = 12;
@@ -427,115 +436,81 @@ const ProductsPage = () => {
             </p>
           </div>
 
-          {/* Barre de filtrage moderne */}
-          <div className="bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
-            <div className="flex flex-col xl:flex-row gap-4 sm:gap-6 items-start xl:items-center">
+          {/* Barre de filtrage */}
+          <div className="bg-white rounded-xl shadow-soft border border-secondary/20 p-4 sm:p-6 mb-6 sm:mb-8">
+            <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
               {/* Recherche */}
-              <div className="flex-1 min-w-0 w-full xl:w-auto">
-                <div className="relative group">
-                  <Search className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4 sm:h-5 sm:w-5 group-focus-within:text-chocolate transition-colors duration-300" />
+              <div className="w-full lg:w-64">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-chocolate/60 h-5 w-5" />
                   <Input
                     type="text"
-                    placeholder="Rechercher un produit..."
+                    placeholder="Rechercher..."
                     value={searchTerm}
-                    onChange={(e) => handleFilterChange(selectedCategory, e.target.value, sortBy)}
-                    className="pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 border-2 border-gray-200 bg-white/80 focus:bg-white focus:border-chocolate focus:ring-4 focus:ring-chocolate/10 transition-all duration-300 text-sm sm:text-base rounded-xl shadow-sm hover:shadow-md w-full"
+                    onChange={(e) => {
+                      setSearchTerm(e.target.value);
+                      handleFilterChange(selectedCategory, e.target.value, sortBy);
+                    }}
+                    className="pl-10 pr-4 py-2 border border-secondary/30 focus:border-chocolate focus:ring-2 focus:ring-chocolate/20 transition-all rounded-lg"
                   />
                 </div>
               </div>
 
               {/* Catégories */}
-              <div className="flex flex-wrap gap-2 sm:gap-3 w-full xl:w-auto justify-center xl:justify-start">
+              <div className="flex flex-wrap gap-2 w-full lg:flex-1">
                 {categories.map((category) => (
                   <button
                     key={category.id}
                     onClick={() => handleFilterChange(category.id, searchTerm, sortBy)}
-                    className={`relative overflow-hidden rounded-xl px-4 sm:px-5 lg:px-6 py-2.5 sm:py-3 font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm sm:text-base ${
+                    className={`px-4 py-2 rounded-lg font-medium transition-all text-sm ${
                       selectedCategory === category.id
-                        ? `${category.color} text-white shadow-lg scale-105 border-0`
-                        : "bg-white/80 text-gray-700 border-2 border-gray-200 hover:border-transparent hover:text-white"
+                        ? "bg-chocolate text-white shadow-md"
+                        : "bg-secondary/20 text-chocolate hover:bg-chocolate/10 border border-secondary/30"
                     }`}
                   >
-                    <span className="relative z-10">{category.name}</span>
-                    {selectedCategory !== category.id && (
-                      <div className={`absolute inset-0 ${category.color} opacity-0 hover:opacity-100 transition-opacity duration-300`} />
-                    )}
+                    {category.name}
                   </button>
                 ))}
               </div>
 
               {/* Tri */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 w-full xl:w-auto">
-                <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/80 rounded-xl border-2 border-gray-200">
-                  <ArrowUpDown className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground" />
-                  <span className="text-xs sm:text-sm font-medium text-gray-700">Trier</span>
-                </div>
+              <div className="flex items-center gap-3 w-full lg:w-auto">
                 <Select value={sortBy} onValueChange={(value) => handleFilterChange(selectedCategory, searchTerm, value)}>
-                  <SelectTrigger className="w-full sm:w-[180px] lg:w-[200px] border-2 border-gray-200 bg-white/80 focus:bg-white focus:border-chocolate focus:ring-4 focus:ring-chocolate/10 transition-all duration-300 rounded-xl py-3 sm:py-4 text-xs sm:text-sm">
+                  <SelectTrigger className="w-full lg:w-[180px] border-secondary/30 focus:border-chocolate focus:ring-2 focus:ring-chocolate/20 rounded-lg">
                     <SelectValue placeholder="Trier par" />
                   </SelectTrigger>
-                  <SelectContent className="rounded-xl border-2 border-gray-200 shadow-xl">
-                    <SelectItem value="default" className="rounded-lg text-sm">Par défaut</SelectItem>
-                    <SelectItem value="price-asc" className="rounded-lg text-sm">
-                      <div className="flex items-center gap-2">
-                        <ArrowUp className="h-4 w-4" />
-                        Prix croissant
-                      </div>
-                    </SelectItem>
-                    <SelectItem value="price-desc" className="rounded-lg text-sm">
-                      <div className="flex items-center gap-2">
-                        <ArrowDown className="h-4 w-4" />
-                        Prix décroissant
-                      </div>
-                    </SelectItem>
-                    <SelectItem value="name-asc" className="rounded-lg text-sm">
-                      <div className="flex items-center gap-2">
-                        <ArrowUp className="h-4 w-4" />
-                        A-Z
-                      </div>
-                    </SelectItem>
-                    <SelectItem value="name-desc" className="rounded-lg text-sm">
-                      <div className="flex items-center gap-2">
-                        <ArrowDown className="h-4 w-4" />
-                        Z-A
-                      </div>
-                    </SelectItem>
+                  <SelectContent className="rounded-lg">
+                    <SelectItem value="default">Par défaut</SelectItem>
+                    <SelectItem value="price-asc">Prix croissant</SelectItem>
+                    <SelectItem value="price-desc">Prix décroissant</SelectItem>
+                    <SelectItem value="name-asc">A-Z</SelectItem>
+                    <SelectItem value="name-desc">Z-A</SelectItem>
                   </SelectContent>
                 </Select>
-              </div>
 
-              {/* Bouton effacer */}
-              {(selectedCategory !== "all" || searchTerm || sortBy !== "default") && (
-                <button
-                  onClick={clearFilters}
-                  className="bg-red-50 border-2 border-red-200 text-red-600 hover:bg-red-100 hover:border-red-300 hover:text-red-700 transition-all duration-300 rounded-xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 font-semibold text-xs sm:text-sm lg:text-base flex items-center gap-1 sm:gap-2"
-                >
-                  <X className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
-                  <span className="hidden sm:inline">Effacer</span>
-                  <span className="sm:hidden">X</span>
-                </button>
-              )}
+                {/* Bouton effacer */}
+                {(selectedCategory !== "all" || searchTerm || sortBy !== "default") && (
+                  <button
+                    onClick={clearFilters}
+                    className="p-2 text-chocolate hover:bg-chocolate/10 rounded-lg transition-all border border-secondary/30"
+                    title="Effacer les filtres"
+                  >
+                    <X className="h-5 w-5" />
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* Compteur de résultats */}
-            <div className="mt-6 pt-6 border-t border-gray-200/50">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="px-4 py-2 bg-gradient-to-r from-chocolate to-copper text-white rounded-xl font-semibold text-sm">
-                    {filteredProducts.length} produit{filteredProducts.length > 1 ? 's' : ''}
-                  </div>
-                  {selectedCategory !== "all" && (
-                    <div className="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
-                      dans <span className="font-semibold text-chocolate">"{categories.find(c => c.id === selectedCategory)?.name}"</span>
-                    </div>
-                  )}
-                </div>
-                {sortBy !== "default" && (
-                  <div className="px-4 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-xl text-sm font-medium">
-                    Trié par {sortBy === "price-asc" ? "prix croissant" : 
-                              sortBy === "price-desc" ? "prix décroissant" :
-                              sortBy === "name-asc" ? "A-Z" : "Z-A"}
-                  </div>
+            <div className="mt-4 pt-4 border-t border-secondary/20">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Badge className="bg-chocolate text-white">
+                  {filteredProducts.length} produit{filteredProducts.length > 1 ? 's' : ''}
+                </Badge>
+                {selectedCategory !== "all" && (
+                  <span>
+                    dans <span className="font-semibold text-chocolate">{categories.find(c => c.id === selectedCategory)?.name}</span>
+                  </span>
                 )}
               </div>
             </div>

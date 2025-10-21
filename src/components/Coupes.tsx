@@ -8,28 +8,28 @@ import coupeEmpreinteSilver from "@/assets/coupe-empreinte-silver.jpg";
 
 const coupes = [
   {
-    id: 1,
+    id: 4,
     name: "Audace",
     price: "950 Dhs",
     description: "coupe dorée en céramique (grande)",
     image: coupeAudaceGold,
   },
   {
-    id: 2,
+    id: 5,
     name: "Audace",
     price: "690 Dhs",
     description: "coupe dorée en céramique (moyenne)",
     image: coupeAudaceGreen,
   },
   {
-    id: 3,
+    id: 6,
     name: "Empreinte",
     price: "1750 Dhs",
     description: "coupe en céramique",
     image: coupeEmpreinteCopper,
   },
   {
-    id: 4,
+    id: 7,
     name: "Empreinte",
     price: "820 Dhs",
     description: "coupelle argenté en céramique (moyenne)",
@@ -74,9 +74,25 @@ const Coupes = () => {
                 <p className="text-lg font-bold text-copper mb-2">
                   {coupe.price}
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground mb-4">
                   {coupe.description}
                 </p>
+                <div className="flex gap-2 justify-center">
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => navigate(`/product/${coupe.id}`)}
+                  >
+                    Détail
+                  </Button>
+                  <Button
+                    size="sm"
+                    className="bg-chocolate text-white hover:bg-chocolate/90"
+                    onClick={() => navigate(`/product/${coupe.id}?order=true`)}
+                  >
+                    Commander
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
