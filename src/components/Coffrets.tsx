@@ -38,7 +38,7 @@ const Coffrets = () => {
 
   return (
     <section id="coffrets" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-secondary/20">
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="text-center mb-6 sm:mb-10 md:mb-12 animate-slide-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-copper mb-2 sm:mb-4">
             Nos Coffrets
