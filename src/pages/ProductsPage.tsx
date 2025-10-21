@@ -536,11 +536,6 @@ const ProductsPage = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute top-3 left-3">
-                      <div className={`px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg ${categories.find(c => c.id === product.category)?.color}`}>
-                        {categories.find(c => c.id === product.category)?.name}
-                      </div>
-                    </div>
                     <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
                         <ShoppingCart className="h-4 w-4 text-chocolate" />
@@ -576,8 +571,7 @@ const ProductsPage = () => {
                         className="bg-gradient-to-r from-chocolate to-copper hover:from-chocolate/90 hover:to-copper/90 text-white font-semibold text-xs sm:text-sm w-full sm:w-auto py-2 px-3 sm:px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
                       >
                         <ShoppingCart className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                        <span className="hidden sm:inline">Commander</span>
-                        <span className="sm:hidden">Cmd</span>
+                        Commander
                       </Button>
                     </div>
                   </CardContent>
