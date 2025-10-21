@@ -1,5 +1,6 @@
 import { Award, Heart, Sparkles, Users, Coffee, Leaf } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import heroChocolate from "@/assets/hero-chocolate.jpg";
 
 const AboutPage = () => {
   return (
@@ -42,7 +43,7 @@ const AboutPage = () => {
           <div className="relative animate-scale-in">
             <div className="relative overflow-hidden rounded-lg shadow-elegant">
               <img 
-                src="/src/assets/hero-chocolate.jpg" 
+                src={heroChocolate} 
                 alt="Notre histoire chocolat" 
                 className="w-full h-96 object-cover"
               />

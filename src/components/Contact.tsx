@@ -1,8 +1,11 @@
 import { Phone, MapPin, Clock, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="contact" className="py-20 bg-chocolate text-white">
       <div className="container mx-auto px-4">
@@ -98,6 +101,7 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
+                onClick={() => navigate('/contact')}
                 className="bg-accent hover:bg-accent/90 text-chocolate font-semibold px-8 shadow-elegant"
               >
                 Demander un devis
