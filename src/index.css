@@ -30,9 +30,9 @@ All colors MUST be HSL.
     --muted: 32 25% 92%;
     --muted-foreground: 25 15% 45%;
 
-    /* Accent: Gold */
-    --accent: 45 95% 55%;
-    --accent-foreground: 25 20% 20%;
+    /* Accent: Copper (changed from gold to match site theme) */
+    --accent: 22 78% 45%;
+    --accent-foreground: 0 0% 100%;
 
     /* Chocolate brown for emphasis */
     --chocolate: 25 45% 30%;
@@ -51,9 +51,9 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     /* Gradients */
-    --gradient-copper: linear-gradient(135deg, hsl(25 55% 50%), hsl(35 65% 60%));
-    --gradient-chocolate: linear-gradient(135deg, hsl(25 45% 30%), hsl(25 35% 20%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 95% 55%), hsl(35 85% 65%));
+    --gradient-copper: linear-gradient(135deg, hsl(22 78% 45%), hsl(25 65% 55%));
+    --gradient-chocolate: linear-gradient(135deg, hsl(25 45% 30%), hsl(22 60% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(22 78% 45%), hsl(25 55% 50%));
     
     /* Shadows */
     --shadow-elegant: 0 10px 40px -10px hsl(25 55% 50% / 0.2);
@@ -82,8 +82,8 @@ All colors MUST be HSL.
     --muted: 25 20% 15%;
     --muted-foreground: 32 15% 65%;
 
-    --accent: 45 95% 65%;
-    --accent-foreground: 25 20% 10%;
+    --accent: 22 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --chocolate: 25 55% 40%;
     --chocolate-foreground: 0 0% 100%;
