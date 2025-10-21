@@ -37,7 +37,7 @@ const Navigation = () => {
     { name: "Accueil", href: "/" },
     { name: "Nos Produits", href: "/products" },
     { name: "À Propos", href: "/about" },
-    { name: "Catalogue", href: "https://l.instagram.com/?u=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1p3f0E1imdBeOcS-DdcKqDrcNCQjilqkf%2Fview%3Fusp%3Ddrivesdk%26fbclid%3DPAZXh0bgNhZW0CMTEAAaf-UeOXgbSsiTta7nCuMz7k9gdo0vXTQARhQxLkqyK19QjPswPWCeF18wPiEA_aem_GlZ5gSN5q9ORfnoAzr-jNg&e=AT3uxInfaYKFplFVDYTAUYPTF06gLbVVRXF0QOBmBZoqUfyHP2HvEBfJEW8J51SabIM7CUBaUyIrhGUBzd0f57S9IZVpR1dRpiJamt-ezg", external: true },
+    { name: "Catalogue", href: "https://drive.google.com/file/d/1p3f0E1imdBeOcS-DdcKqDrcNCQjilqkf/view?fbclid=PAZXh0bgNhZW0CMTEAAafau2VKrXa4cKNSs8voMGDRTx8FFMW_ujGwJOmTuGcAE9YuStb9zUz83pfn0Q_aem_03Ldy0DppcgJJGINumIfZg", external: true },
     { name: "Contact", href: "/contact" },
   ];
 

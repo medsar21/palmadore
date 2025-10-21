@@ -262,22 +262,6 @@ const ContactPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-elegant">
-              <CardContent className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent mb-4">
-                  <Instagram className="h-8 w-8 text-chocolate" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Réseaux Sociaux</h3>
-                <Button 
-                  size="lg"
-                  onClick={() => window.open('https://wa.me/+212660436040', '_blank')}
-                  className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 shadow-elegant w-full"
-                >
-                  <MessageCircle className="h-5 w-5 mr-2" />
-                  WhatsApp
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
