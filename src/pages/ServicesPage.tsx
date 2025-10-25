@@ -14,6 +14,11 @@ import coupeEmpreinteCopper from "@/assets/coupe-empreinte-copper.jpg";
 import barCaramel from "@/assets/bar-caramel.jpg";
 import barPistache from "@/assets/bar-pistache.jpg";
 
+// Nouvelles images de tables
+import table1 from "@/assets/table 1.jpg";
+import table2 from "@/assets/table 2.jpg";
+import table3 from "@/assets/table 3.webp";
+
 interface ServiceArticle {
   id: string;
   title: string;
@@ -37,7 +42,7 @@ const services: ServiceArticle[] = [
     title: "Chocolats pour Fiançailles",
     category: "Fiançailles",
     icon: Heart,
-    image: coupeAudaceGold,
+    image: table1,
     excerpt: "Célébrez votre amour avec nos créations chocolatées raffinées, parfaites pour marquer ce moment unique.",
     description: "Les fiançailles sont un moment magique qui mérite d'être célébré avec élégance. Nos chocolats artisanaux sont conçus pour sublimer cette occasion spéciale et offrir à vos invités une expérience gustative inoubliable. Chaque pièce est travaillée avec soin pour refléter la beauté et la douceur de cet engagement.",
     features: [
@@ -77,7 +82,7 @@ const services: ServiceArticle[] = [
     title: "Chocolats pour Naissance",
     category: "Naissance",
     icon: Baby,
-    image: coffretMedium,
+    image: table2,
     excerpt: "Annoncez l'arrivée de votre bébé avec des chocolats doux et délicats qui toucheront le cœur de tous.",
     description: "L'arrivée d'un nouveau-né est une bénédiction qui se célèbre avec joie et douceur. Nos chocolats pour naissance sont pensés pour partager ce bonheur avec vos proches. Avec des saveurs douces et des présentations adorables, nos créations sont parfaites pour annoncer la bonne nouvelle ou remercier vos visiteurs.",
     features: [
@@ -117,7 +122,7 @@ const services: ServiceArticle[] = [
     title: "Chocolats pour Anniversaire",
     category: "Anniversaire",
     icon: Cake,
-    image: coupeEmpreinteCopper,
+    image: table3,
     excerpt: "Rendez chaque anniversaire inoubliable avec nos chocolats artisanaux qui feront briller les yeux de tous.",
     description: "Qu'il s'agisse d'un anniversaire d'enfant ou d'adulte, nos chocolats artisanaux ajoutent une touche de magie à votre célébration. Nous offrons une large gamme de produits adaptés à tous les âges et tous les goûts, des chocolats au lait onctueux aux créations plus sophistiquées pour les palais avertis.",
     features: [
