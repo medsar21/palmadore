@@ -15,6 +15,10 @@ import OrderConfirmation from "./pages/OrderConfirmation";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ServicesPage from "./pages/ServicesPage";
+import ServiceMarriagePage from "./pages/ServiceMarriagePage";
+import ServiceFiancaillesPage from "./pages/ServiceFiancaillesPage";
+import ServiceNaissancePage from "./pages/ServiceNaissancePage";
+import ServiceAnniversairePage from "./pages/ServiceAnniversairePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -53,6 +57,10 @@ const App = () => {
             </Route>
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
+            <Route path="/services/mariage" element={<ServiceMarriagePage />} />
+            <Route path="/services/fiancailles" element={<ServiceFiancaillesPage />} />
+            <Route path="/services/naissance" element={<ServiceNaissancePage />} />
+            <Route path="/services/anniversaire" element={<ServiceAnniversairePage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
