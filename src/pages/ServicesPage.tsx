@@ -254,7 +254,7 @@ const ServicesPage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--copper))] to-[hsl(var(--gold))] opacity-10" />
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[hsl(var(--copper))] to-[hsl(var(--gold))] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#8B4513]">
               Tables de Mariage & Événements Spéciaux
             </h1>
             <p className="text-lg text-muted-foreground">
