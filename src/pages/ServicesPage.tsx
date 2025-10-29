@@ -240,9 +240,9 @@ const ServicesPage = () => {
         <div className="absolute bottom-8 left-0 right-0 z-10">
           <div className="container mx-auto">
             <div className="text-center flex justify-center">
-              {/* Orange Contactez-nous Button */}
-              <div className="px-12 py-4 bg-[#D2691E] hover:bg-[#C85A0F] text-white text-2xl md:text-3xl font-bold rounded-lg shadow-2xl transition-colors">
-                Contactez-nous
+              {/* Orange Services Button */}
+              <div className="px-8 py-3 bg-[#D2691E] hover:bg-[#C85A0F] text-white text-lg md:text-xl font-bold rounded-lg shadow-2xl transition-colors">
+                Services
               </div>
             </div>
           </div>
