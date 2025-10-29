@@ -18,7 +18,7 @@ import barPistache from "@/assets/bar-pistache.jpg";
 import cImage from "@/assets/c.jpg";
 import ccImage from "@/assets/cc.jpg";
 import cccImage from "@/assets/ccc.jpg";
-import tableImage from "@/assets/table 1.jpg";
+import tableImage from "@/assets/tayfour.png";
 
 interface ServiceArticle {
   id: string;
