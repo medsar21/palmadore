@@ -18,6 +18,7 @@ import barPistache from "@/assets/bar-pistache.jpg";
 import cImage from "@/assets/c.jpg";
 import ccImage from "@/assets/cc.jpg";
 import cccImage from "@/assets/ccc.jpg";
+import tableImage from "@/assets/table 1.jpg";
 
 interface ServiceArticle {
   id: string;
@@ -225,18 +226,40 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-secondary/20 to-background">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      {/* Hero Section with Image */}
+      <section className="relative h-[500px] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${tableImage})` }}
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-black/20" />
+        
+        {/* Bottom Section with Orange Button */}
+        <div className="absolute bottom-8 left-0 right-0 z-10">
+          <div className="container mx-auto">
+            <div className="text-center flex justify-center">
+              {/* Orange Contactez-nous Button */}
+              <div className="px-12 py-4 bg-[#D2691E] hover:bg-[#C85A0F] text-white text-2xl md:text-3xl font-bold rounded-lg shadow-2xl transition-colors">
+                Contactez-nous
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Text Section Below Hero */}
+      <section className="relative py-12 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--copper))] to-[hsl(var(--gold))] opacity-10" />
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <Badge className="mb-4 bg-[hsl(var(--copper))] text-white">Nos Services</Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-[hsl(var(--copper))] to-[hsl(var(--gold))] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[hsl(var(--copper))] to-[hsl(var(--gold))] bg-clip-text text-transparent">
               Tables de Mariage & Événements Spéciaux
             </h1>
             <p className="text-lg text-muted-foreground">
               Découvrez nos services de préparation de tables chocolatées pour vos événements les plus précieux : 
-              mariages, fiançailles, naissances et anniversaires. Chaque table est une œuvre d'art gourmande.
+              mariages, fiançailles, naissances et anniversaires.
             </p>
           </div>
         </div>
