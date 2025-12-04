@@ -38,7 +38,7 @@ const Navigation = () => {
     { name: "Nos Produits", href: "/products" },
     { name: "Services", href: "/services" },
     { name: "À Propos", href: "/about" },
-    { name: "Catalogue", href: "https://drive.google.com/file/d/1p3f0E1imdBeOcS-DdcKqDrcNCQjilqkf/view?fbclid=PAZXh0bgNhZW0CMTEAAafau2VKrXa4cKNSs8voMGDRTx8FFMW_ujGwJOmTuGcAE9YuStb9zUz83pfn0Q_aem_03Ldy0DppcgJJGINumIfZg", external: true },
+    { name: "Catalogue", href: "/catalogue.pdf", external: true },
     { name: "Contact", href: "/contact" },
   ];
 
