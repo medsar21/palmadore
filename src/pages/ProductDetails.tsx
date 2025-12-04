@@ -127,37 +127,6 @@ const allProducts = [
     rating: 4.7,
     reviews: 52
   },
-  // Truffes
-  {
-    id: 8,
-    name: "Truffes Premium",
-    description: "Truffes artisanales avec garniture d'or comestible",
-    price: "À partir de 350 Dhs",
-    image: product3,
-    category: "truffes",
-    tags: ["premium", "or"],
-    fullDescription: "Nos truffes premium sont une véritable œuvre d'art culinaire. Garnies d'or comestible, elles offrent une expérience gustative et visuelle exceptionnelle.",
-    ingredients: "Ganache au chocolat noir, cacao pur, or comestible 24 carats",
-    weight: "200g (12 pièces)",
-    allergens: "Contient du lait et des traces de noix",
-    rating: 4.9,
-    reviews: 91
-  },
-  {
-    id: 9,
-    name: "Truffes Classiques",
-    description: "Truffes traditionnelles aux saveurs authentiques",
-    price: "280 Dhs",
-    image: product1,
-    category: "truffes",
-    tags: ["classique", "traditionnel"],
-    fullDescription: "Retour aux sources avec nos truffes classiques. Recette traditionnelle respectée pour des saveurs authentiques et intemporelles.",
-    ingredients: "Ganache au chocolat, cacao en poudre, crème fraîche",
-    weight: "150g (9 pièces)",
-    allergens: "Contient du lait",
-    rating: 4.6,
-    reviews: 134
-  },
   // Coffrets
   {
     id: 20,
@@ -198,7 +167,7 @@ const allProducts = [
     category: "coffrets",
     tags: ["plateau", "cuir", "grand"],
     fullDescription: "Notre plus grand coffret Volupté de 2kg est une véritable célébration du chocolat. Magnifique plateau en cuir bicolore haut de gamme, garni d'une collection exceptionnelle de nos créations les plus raffinées. Le cadeau ultime pour les vrais amateurs.",
-    ingredients: "Collection complète de chocolats premium, truffes, pralinés nobles, ganaches d'exception",
+    ingredients: "Collection complète de chocolats premium, pralinés nobles, ganaches d'exception",
     weight: "2kg",
     allergens: "Contient du lait, des noix et du gluten",
     rating: 5.0,

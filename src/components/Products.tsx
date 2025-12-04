@@ -18,9 +18,9 @@ const baseProducts = [
     image: product2,
   },
   {
-    name: "Truffes Premium",
-    description: "Truffes artisanales avec garniture d'or comestible",
-    price: "À partir de 350 Dhs",
+    name: "Chocolat Noir Premium",
+    description: "Chocolat noir pur à 70% de cacao",
+    price: "180 Dhs",
     image: product3,
   },
 ];

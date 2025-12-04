@@ -29,7 +29,6 @@ const categories = [
   { id: "coupes", name: "Coupes" },
   { id: "coffrets", name: "Coffrets" },
   { id: "boites", name: "Boîtes" },
-  { id: "truffes", name: "Truffes" },
 ];
 
 const allProducts = [
@@ -286,52 +285,6 @@ const allProducts = [
     tags: ["cadeau", "ruban"],
   },
 
-  // Truffes
-  {
-    id: 28,
-    name: "Truffes Premium",
-    description: "Truffes artisanales avec garniture d'or comestible",
-    price: "À partir de 350 Dhs",
-    image: product3,
-    category: "truffes",
-    tags: ["premium", "or"],
-  },
-  {
-    id: 29,
-    name: "Truffes Classiques",
-    description: "Truffes traditionnelles aux saveurs authentiques",
-    price: "280 Dhs",
-    image: product1,
-    category: "truffes",
-    tags: ["classique", "traditionnel"],
-  },
-  {
-    id: 30,
-    name: "Truffes Cognac",
-    description: "Truffes au cognac vieux",
-    price: "320 Dhs",
-    image: product2,
-    category: "truffes",
-    tags: ["cognac", "vieux"],
-  },
-  {
-    id: 31,
-    name: "Truffes Framboise",
-    description: "Truffes à la framboise",
-    price: "290 Dhs",
-    image: product3,
-    category: "truffes",
-    tags: ["framboise", "fruit"],
-  },
-  {
-    id: 32,
-    name: "Truffes Café",
-    description: "Truffes au café arabica",
-    price: "300 Dhs",
-    image: product1,
-    category: "truffes",
-    tags: ["café", "arabica"],
-  },
 ];
 
 const ProductsPage = () => {
