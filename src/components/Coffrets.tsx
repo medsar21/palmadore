@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import coffretSmall from "@/assets/coffret-small.jpg";
-import coffretMedium from "@/assets/coffret-medium.jpg";
-import coffretLarge from "@/assets/coffret-large.jpg";
+import coffretSmall from "@/assets/Artboard 16.png";
+import coffretMedium from "@/assets/Artboard 17.png";
+import coffretLarge from "@/assets/Artboard 18.png";
 
 const coffrets = [
   {

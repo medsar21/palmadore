@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Heart, ArrowLeft, Star, CheckCircle } from "lucide-react";
 
 // Images des produits pour les fiançailles
-import coffretLarge from "@/assets/coffret-large.jpg";
-import coupeAudaceGold from "@/assets/coupe-audace-gold.jpg";
-import barCaramel from "@/assets/bar-caramel.jpg";
-import ccImage from "@/assets/cc.jpg";
+import coffretLarge from "@/assets/Artboard 18.png";
+import coupeAudaceGold from "@/assets/Artboard 12.png";
+import barCaramel from "@/assets/Artboard 8.png";
+import ccImage from "@/assets/Artboard 20.png";
 
 const ServiceFiancaillesPage = () => {
   const navigate = useNavigate();

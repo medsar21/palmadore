@@ -7,11 +7,11 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import coffretLarge from "@/assets/coffret-large.jpg";
-import coffretMedium from "@/assets/coffret-medium.jpg";
-import coffretSmall from "@/assets/coffret-small.jpg";
-import coupeAudaceGold from "@/assets/coupe-audace-gold.jpg";
-import coupeEmpreinteCopper from "@/assets/coupe-empreinte-copper.jpg";
+import coffretLarge from "@/assets/Artboard 18.png";
+import coffretMedium from "@/assets/Artboard 17.png";
+import coffretSmall from "@/assets/Artboard 16.png";
+import coupeAudaceGold from "@/assets/Artboard 12.png";
+import coupeEmpreinteCopper from "@/assets/Artboard 14.png";
 
 const featuredProducts = [
   {

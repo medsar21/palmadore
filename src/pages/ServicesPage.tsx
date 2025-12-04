@@ -6,19 +6,19 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Heart, Baby, Cake, ArrowRight, ChevronLeft, Users } from "lucide-react";
 
 // Images des produits pour les événements
-import coffretLarge from "@/assets/coffret-large.jpg";
-import coffretMedium from "@/assets/coffret-medium.jpg";
-import coffretSmall from "@/assets/coffret-small.jpg";
-import coupeAudaceGold from "@/assets/coupe-audace-gold.jpg";
-import coupeEmpreinteCopper from "@/assets/coupe-empreinte-copper.jpg";
-import barCaramel from "@/assets/bar-caramel.jpg";
-import barPistache from "@/assets/bar-pistache.jpg";
+import coffretLarge from "@/assets/Artboard 18.png";
+import coffretMedium from "@/assets/Artboard 17.png";
+import coffretSmall from "@/assets/Artboard 16.png";
+import coupeAudaceGold from "@/assets/Artboard 12.png";
+import coupeEmpreinteCopper from "@/assets/Artboard 14.png";
+import barCaramel from "@/assets/Artboard 8.png";
+import barPistache from "@/assets/Artboard 11.png";
 
 // Nouvelles images de tables
-import cImage from "@/assets/c.jpg";
-import ccImage from "@/assets/cc.jpg";
-import cccImage from "@/assets/ccc.jpg";
-import tableImage from "@/assets/tayfour.png";
+import cImage from "@/assets/Artboard 19.png";
+import ccImage from "@/assets/Artboard 20.png";
+import cccImage from "@/assets/Artboard 1.png";
+import tableImage from "@/assets/Artboard 2.png";
 
 interface ServiceArticle {
   id: string;

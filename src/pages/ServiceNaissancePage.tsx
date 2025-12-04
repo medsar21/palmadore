@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Baby, ArrowLeft, Star, CheckCircle } from "lucide-react";
 
 // Images des produits pour les naissances
-import coffretMedium from "@/assets/coffret-medium.jpg";
-import coffretSmall from "@/assets/coffret-small.jpg";
-import coupeEmpreinteCopper from "@/assets/coupe-empreinte-copper.jpg";
-import cccImage from "@/assets/ccc.jpg";
+import coffretMedium from "@/assets/Artboard 17.png";
+import coffretSmall from "@/assets/Artboard 16.png";
+import coupeEmpreinteCopper from "@/assets/Artboard 14.png";
+import cccImage from "@/assets/Artboard 1.png";
 
 const ServiceNaissancePage = () => {
   const navigate = useNavigate();

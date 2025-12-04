@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Heart, ArrowLeft, Users, Star, CheckCircle } from "lucide-react";
 
 // Images des produits pour les mariages
-import coffretLarge from "@/assets/coffret-large.jpg";
-import coupeAudaceGold from "@/assets/coupe-audace-gold.jpg";
-import barCaramel from "@/assets/bar-caramel.jpg";
-import cImage from "@/assets/c.jpg";
+import coffretLarge from "@/assets/Artboard 18.png";
+import coupeAudaceGold from "@/assets/Artboard 12.png";
+import barCaramel from "@/assets/Artboard 8.png";
+import cImage from "@/assets/Artboard 19.png";
 
 const ServiceMarriagePage = () => {
   const navigate = useNavigate();

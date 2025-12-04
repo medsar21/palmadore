@@ -3,9 +3,9 @@ import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import heroImage1 from "@/assets/hero-chocolate.jpg";
-import heroImage2 from "@/assets/product-1.jpg";
-import heroImage3 from "@/assets/product-2.jpg";
-import heroImage4 from "@/assets/product-3.jpg";
+import heroImage2 from "@/assets/Artboard 1.png";
+import heroImage3 from "@/assets/Artboard 2.png";
+import heroImage4 from "@/assets/Artboard 3.png";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

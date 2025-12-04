@@ -7,16 +7,35 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Heart, Share2, Star, ShoppingCart } from "lucide-react";
-import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-import coupeAudaceGold from "@/assets/coupe-audace-gold.jpg";
-import coupeAudaceGreen from "@/assets/coupe-audace-green.jpg";
-import coupeEmpreinteCopper from "@/assets/coupe-empreinte-copper.jpg";
-import coupeEmpreinteSilver from "@/assets/coupe-empreinte-silver.jpg";
-import coffretSmall from "@/assets/coffret-small.jpg";
-import coffretMedium from "@/assets/coffret-medium.jpg";
-import coffretLarge from "@/assets/coffret-large.jpg";
+import product1 from "@/assets/Artboard 5.png";
+import product2 from "@/assets/Artboard 6.png";
+import product3 from "@/assets/Artboard 7.png";
+import coupeEleganceS from "@/assets/Artboard 12.png";
+import coupeEleganceM from "@/assets/Artboard 13.png";
+import coupeEleganceL from "@/assets/Artboard 14.png";
+import coupeEmeraudeS from "@/assets/Artboard 15.png";
+import coupeEmeraudeM from "@/assets/Artboard 16.png";
+import coupePrestige from "@/assets/Artboard 17.png";
+import coupePrestigeL from "@/assets/Artboard 18.png";
+import coupeTresorM from "@/assets/Artboard 19.png";
+import coupeTresorL from "@/assets/Artboard 20.png";
+import coupeAudaceS from "@/assets/Artboard 1.png";
+import coupeAudaceM from "@/assets/Artboard 2.png";
+import coupeAudaceL from "@/assets/Artboard 3.png";
+import oumnia from "@/assets/Artboard 4.png";
+import oumniaL from "@/assets/Artboard 5.png";
+import coupeOvalS from "@/assets/Artboard 6.png";
+import coupeOvalM from "@/assets/Artboard 7.png";
+import serviteur from "@/assets/Artboard 8.png";
+import coupePiedL from "@/assets/Artboard 9.png";
+import coupePiedM from "@/assets/Artboard 10.png";
+import coupePrestigeGoldM from "@/assets/Artboard 11.png";
+import coupeRoyaleGoldL from "@/assets/Artboard 9.png";
+import coupeFeddaM from "@/assets/Artboard 10.png";
+import coupeFeddaL from "@/assets/Artboard 11.png";
+import coffretSmall from "@/assets/Artboard 16.png";
+import coffretMedium from "@/assets/Artboard 17.png";
+import coffretLarge from "@/assets/Artboard 18.png";
 
 // Base de données des produits (même que ProductsPage)
 const allProducts = [
@@ -68,64 +87,372 @@ const allProducts = [
   },
   // Coupes
   {
-    id: 4,
-    name: "Audace Dorée",
-    description: "Coupe dorée en céramique (grande)",
-    price: "950 Dhs",
-    image: coupeAudaceGold,
+    id: 12,
+    name: "Coupe Élégance S",
+    description: "Coupe élégante en porcelaine blanche avec base dorée. Assortiment de 150g de chocolats fins emballés dans des papiers dorés, verts et bruns.",
+    price: "200 Dhs",
+    image: coupeEleganceS,
     category: "coupes",
-    tags: ["dorée", "céramique"],
-    fullDescription: "Une coupe d'exception en céramique dorée qui sublime vos créations chocolatées. Design moderne et élégant pour des présentations raffinées.",
-    ingredients: "Céramique de qualité, dorure 24 carats",
-    weight: "800g",
-    allergens: "Aucun",
-    rating: 4.9,
-    reviews: 43
+    tags: ["élégance", "porcelaine", "150g"],
+    reference: "Réf 035",
+    fullDescription: "Coupe élégante en porcelaine blanche avec base dorée. Assortiment de 150g de chocolats fins emballés dans des papiers dorés, verts et bruns. Parfaite pour offrir ou se faire plaisir. Chaque chocolat est soigneusement sélectionné pour offrir une expérience gustative exceptionnelle.",
+    ingredients: "Chocolats fins variés, papiers d'emballage métalliques",
+    weight: "150g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.8,
+    reviews: 45
   },
   {
-    id: 5,
-    name: "Audace Verte",
-    description: "Coupe dorée en céramique (moyenne)",
-    price: "690 Dhs",
-    image: coupeAudaceGreen,
+    id: 13,
+    name: "Coupe Élégance M",
+    description: "Coupe élégante moyenne en porcelaine blanche avec base dorée. Assortiment généreux de 350g de chocolats fins disposés en couches concentriques.",
+    price: "350 Dhs",
+    image: coupeEleganceM,
     category: "coupes",
-    tags: ["verte", "céramique"],
-    fullDescription: "Version moyenne de notre coupe Audace avec une finition verte élégante. Parfaite pour des portions individuelles raffinées.",
-    ingredients: "Céramique de qualité, émail vert",
-    weight: "500g",
-    allergens: "Aucun",
-    rating: 4.8,
+    tags: ["élégance", "porcelaine", "350g"],
+    reference: "Réf 036",
+    fullDescription: "Coupe élégante moyenne en porcelaine blanche avec base dorée. Assortiment généreux de 350g de chocolats fins disposés en couches concentriques avec emballages dorés, verts et bruns. Une présentation raffinée qui impressionnera vos invités.",
+    ingredients: "Chocolats fins variés, papiers d'emballage métalliques",
+    weight: "350g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.9,
     reviews: 67
   },
   {
-    id: 6,
-    name: "Empreinte Cuivre",
-    description: "Coupe en céramique",
-    price: "1750 Dhs",
-    image: coupeEmpreinteCopper,
+    id: 14,
+    name: "Coupe Élégance L",
+    description: "Grande coupe élégante en porcelaine blanche avec base dorée. Assortiment premium de 650g de chocolats fins arrangés en dôme élégant.",
+    price: "750 Dhs",
+    image: coupeEleganceL,
     category: "coupes",
-    tags: ["cuivre", "céramique"],
-    fullDescription: "Une œuvre d'art en céramique avec finition cuivre. Chaque pièce est unique et témoigne de notre savoir-faire artisanal.",
-    ingredients: "Céramique artisanale, finition cuivre",
-    weight: "1200g",
-    allergens: "Aucun",
+    tags: ["élégance", "porcelaine", "650g"],
+    reference: "Réf 037",
+    fullDescription: "Grande coupe élégante en porcelaine blanche avec base dorée. Assortiment premium de 650g de chocolats fins arrangés en dôme élégant avec une variété d'emballages métalliques. Le cadeau parfait pour les grandes occasions.",
+    ingredients: "Chocolats fins variés, papiers d'emballage métalliques",
+    weight: "650g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
     rating: 5.0,
-    reviews: 28
+    reviews: 89
   },
   {
-    id: 7,
-    name: "Empreinte Argent",
-    description: "Coupelle argentée en céramique (moyenne)",
-    price: "820 Dhs",
-    image: coupeEmpreinteSilver,
+    id: 15,
+    name: "Coupe Émeraude S",
+    description: "Coupe émeraude petite avec base dorée sphérique. Assortiment de 350g de chocolats carrés emballés dans des papiers dorés et vert émeraude.",
+    price: "350 Dhs",
+    image: coupeEmeraudeS,
     category: "coupes",
-    tags: ["argent", "céramique"],
-    fullDescription: "Coupelle raffinée avec finition argentée. Design épuré et moderne pour une présentation sophistiquée de vos créations.",
-    ingredients: "Céramique de qualité, finition argent",
-    weight: "600g",
-    allergens: "Aucun",
+    tags: ["émeraude", "dorée", "350g"],
+    reference: "Réf 038",
+    fullDescription: "Coupe émeraude petite avec base dorée sphérique. Assortiment de 350g de chocolats carrés emballés dans des papiers dorés et vert émeraude, avec pralines au centre. Design unique et élégant.",
+    ingredients: "Chocolats carrés, pralines, papiers d'emballage métalliques",
+    weight: "350g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
     rating: 4.7,
     reviews: 52
+  },
+  {
+    id: 16,
+    name: "Coupe Émeraude M",
+    description: "Coupe émeraude moyenne avec base dorée sphérique. Assortiment généreux de 650g de chocolats carrés emballés dans des papiers dorés et vert émeraude.",
+    price: "750 Dhs",
+    image: coupeEmeraudeM,
+    category: "coupes",
+    tags: ["émeraude", "dorée", "650g"],
+    reference: "Réf 039",
+    fullDescription: "Coupe émeraude moyenne avec base dorée sphérique. Assortiment généreux de 650g de chocolats carrés emballés dans des papiers dorés et vert émeraude, avec pralines et chocolats blancs au centre. Une présentation luxueuse.",
+    ingredients: "Chocolats carrés, pralines, chocolats blancs, papiers d'emballage métalliques",
+    weight: "650g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.8,
+    reviews: 73
+  },
+  {
+    id: 17,
+    name: "Coupe Prestige",
+    description: "Coupe prestige en or texturé avec motif tissé. Assortiment de 500g de chocolats rectangulaires emballés dans des papiers dorés et orange.",
+    price: "650 Dhs",
+    image: coupePrestige,
+    category: "coupes",
+    tags: ["prestige", "dorée", "500g"],
+    reference: "Réf 040",
+    fullDescription: "Coupe prestige en or texturé avec motif tissé. Assortiment de 500g de chocolats rectangulaires emballés dans des papiers dorés et orange, avec pralines au centre. Design exclusif et raffiné.",
+    ingredients: "Chocolats rectangulaires, pralines, papiers d'emballage métalliques",
+    weight: "500g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.9,
+    reviews: 61
+  },
+  {
+    id: 18,
+    name: "Coupe Prestige L",
+    description: "Grande coupe prestige en or texturé avec motif tissé. Assortiment premium de 900g de chocolats rectangulaires emballés dans des papiers dorés et orange.",
+    price: "950 Dhs",
+    image: coupePrestigeL,
+    category: "coupes",
+    tags: ["prestige", "dorée", "900g"],
+    reference: "Réf 041",
+    fullDescription: "Grande coupe prestige en or texturé avec motif tissé. Assortiment premium de 900g de chocolats rectangulaires emballés dans des papiers dorés et orange, avec pralines et dattes enrobées au centre. Le summum du luxe.",
+    ingredients: "Chocolats rectangulaires, pralines, dattes enrobées, papiers d'emballage métalliques",
+    weight: "900g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 5.0,
+    reviews: 84
+  },
+  {
+    id: 19,
+    name: "Coupe Tresor M",
+    description: "Coupe trésor moyenne sur plateau gris argenté avec pieds dorés. Assortiment de 800g de chocolats carrés emballés dans des papiers bleu royal et blanc.",
+    price: "1100 Dhs",
+    image: coupeTresorM,
+    category: "coupes",
+    tags: ["trésor", "argenté", "800g"],
+    reference: "Réf 042",
+    fullDescription: "Coupe trésor moyenne sur plateau gris argenté avec pieds dorés. Assortiment de 800g de chocolats carrés emballés dans des papiers bleu royal et blanc, avec pralines et chocolats décoratifs au centre. Une véritable œuvre d'art.",
+    ingredients: "Chocolats carrés, pralines, chocolats décoratifs, papiers d'emballage métalliques",
+    weight: "800g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.9,
+    reviews: 56
+  },
+  {
+    id: 20,
+    name: "Coupe Tresor L",
+    description: "Grande coupe trésor sur plateau gris argenté avec pieds dorés. Assortiment exceptionnel de 1400g de chocolats carrés emballés dans des papiers bleu royal, blanc et doré.",
+    price: "1650 Dhs",
+    image: coupeTresorL,
+    category: "coupes",
+    tags: ["trésor", "argenté", "1400g"],
+    reference: "Réf 043",
+    fullDescription: "Grande coupe trésor sur plateau gris argenté avec pieds dorés. Assortiment exceptionnel de 1400g de chocolats carrés emballés dans des papiers bleu royal, blanc et doré, avec pralines et décorations au centre. Le cadeau ultime.",
+    ingredients: "Chocolats carrés, pralines, décorations, papiers d'emballage métalliques",
+    weight: "1400g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 5.0,
+    reviews: 92
+  },
+  {
+    id: 21,
+    name: "Coupe Audace S",
+    description: "Coupe audace petite avec base dorée circulaire et support argenté. Assortiment de 850g de chocolats carrés emballés dans des papiers rouge vif et blanc.",
+    price: "1200 Dhs",
+    image: coupeAudaceS,
+    category: "coupes",
+    tags: ["audace", "rouge", "850g"],
+    reference: "Réf 044",
+    fullDescription: "Coupe audace petite avec base dorée circulaire et support argenté. Assortiment de 850g de chocolats carrés emballés dans des papiers rouge vif et blanc, avec pralines décoratives au centre. Design audacieux et moderne.",
+    ingredients: "Chocolats carrés, pralines, papiers d'emballage métalliques",
+    weight: "850g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.8,
+    reviews: 48
+  },
+  {
+    id: 22,
+    name: "Coupe Audace M",
+    description: "Coupe audace moyenne avec base dorée circulaire et support argenté. Assortiment généreux de 1500g de chocolats carrés emballés dans des papiers rouge vif et blanc.",
+    price: "1800 Dhs",
+    image: coupeAudaceM,
+    category: "coupes",
+    tags: ["audace", "rouge", "1500g"],
+    reference: "Réf 045",
+    fullDescription: "Coupe audace moyenne avec base dorée circulaire et support argenté. Assortiment généreux de 1500g de chocolats carrés emballés dans des papiers rouge vif et blanc, avec pralines et noisettes au centre. Pour les grandes occasions.",
+    ingredients: "Chocolats carrés, pralines, noisettes, papiers d'emballage métalliques",
+    weight: "1500g",
+    allergens: "Contient du lait et des noisettes",
+    rating: 4.9,
+    reviews: 65
+  },
+  {
+    id: 23,
+    name: "Coupe Audace L",
+    description: "Grande coupe audace avec base dorée circulaire et support argenté. Assortiment exceptionnel de 2300g de chocolats carrés emballés dans des papiers rouge vif et blanc.",
+    price: "2600 Dhs",
+    image: coupeAudaceL,
+    category: "coupes",
+    tags: ["audace", "rouge", "2300g"],
+    reference: "Réf 046",
+    fullDescription: "Grande coupe audace avec base dorée circulaire et support argenté. Assortiment exceptionnel de 2300g de chocolats carrés emballés dans des papiers rouge vif et blanc, avec pralines, noisettes et amandes au centre. Le summum de l'audace.",
+    ingredients: "Chocolats carrés, pralines, noisettes, amandes, papiers d'emballage métalliques",
+    weight: "2300g",
+    allergens: "Contient du lait, des noisettes et des amandes",
+    rating: 5.0,
+    reviews: 78
+  },
+  {
+    id: 24,
+    name: "Oumnia",
+    description: "Boîte cadeau élégante en crème avec intérieur doré et couvercle orné. Assortiment de 300g de chocolats carrés emballés dans des papiers vert-bleu sarcelle et argenté.",
+    price: "550 Dhs",
+    image: oumnia,
+    category: "coupes",
+    tags: ["oumnia", "boîte", "300g"],
+    reference: "Réf 047",
+    fullDescription: "Boîte cadeau élégante en crème avec intérieur doré et couvercle orné. Assortiment de 300g de chocolats carrés emballés dans des papiers vert-bleu sarcelle et argenté, accompagné d'un petit livre décoratif. Parfait pour offrir.",
+    ingredients: "Chocolats carrés, papiers d'emballage métalliques",
+    weight: "300g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.7,
+    reviews: 41
+  },
+  {
+    id: 25,
+    name: "Oumnia L",
+    description: "Grande boîte cadeau élégante en crème avec intérieur doré et couvercle orné. Assortiment généreux de 700g de chocolats carrés emballés dans des papiers vert-bleu sarcelle et argenté.",
+    price: "950 Dhs",
+    image: oumniaL,
+    category: "coupes",
+    tags: ["oumnia", "boîte", "700g"],
+    reference: "Réf 048",
+    fullDescription: "Grande boîte cadeau élégante en crème avec intérieur doré et couvercle orné. Assortiment généreux de 700g de chocolats carrés emballés dans des papiers vert-bleu sarcelle et argenté, accompagné d'un petit livre décoratif. Le cadeau idéal.",
+    ingredients: "Chocolats carrés, papiers d'emballage métalliques",
+    weight: "700g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.8,
+    reviews: 59
+  },
+  {
+    id: 26,
+    name: "Coupe Oval S",
+    description: "Coupe ovale petite en porcelaine blanche. Assortiment de 600g de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés.",
+    price: "650 Dhs",
+    image: coupeOvalS,
+    category: "coupes",
+    tags: ["ovale", "porcelaine", "600g"],
+    reference: "Réf 023",
+    fullDescription: "Coupe ovale petite en porcelaine blanche. Assortiment de 600g de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés, avec pralines au centre. Design élégant et moderne.",
+    ingredients: "Chocolats variés, pralines, papiers d'emballage métalliques",
+    weight: "600g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.6,
+    reviews: 38
+  },
+  {
+    id: 27,
+    name: "Coupe Oval M",
+    description: "Coupe ovale moyenne en porcelaine blanche. Assortiment généreux de 900g de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés.",
+    price: "950 Dhs",
+    image: coupeOvalM,
+    category: "coupes",
+    tags: ["ovale", "porcelaine", "900g"],
+    reference: "Réf 024",
+    fullDescription: "Coupe ovale moyenne en porcelaine blanche. Assortiment généreux de 900g de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés, avec pralines texturées et noisettes au centre. Une présentation raffinée.",
+    ingredients: "Chocolats variés, pralines texturées, noisettes, papiers d'emballage métalliques",
+    weight: "900g",
+    allergens: "Contient du lait et des noisettes",
+    rating: 4.8,
+    reviews: 54
+  },
+  {
+    id: 28,
+    name: "Serviteur",
+    description: "Serviteur à deux étages circulaires en porcelaine blanche avec bordures dorées. Assortiment exceptionnel de 1.1kg de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés.",
+    price: "1200 Dhs",
+    image: serviteur,
+    category: "coupes",
+    tags: ["serviteur", "deux étages", "1.1kg"],
+    reference: "Réf 025",
+    fullDescription: "Serviteur à deux étages circulaires en porcelaine blanche avec bordures dorées. Assortiment exceptionnel de 1.1kg de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés, arrangés en cercles concentriques avec élément décoratif central. Le summum de l'élégance.",
+    ingredients: "Chocolats variés, papiers d'emballage métalliques, élément décoratif",
+    weight: "1.1kg",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 5.0,
+    reviews: 71
+  },
+  {
+    id: 29,
+    name: "Coupe à pied L",
+    description: "Élégante coupe à pied de taille L en céramique blanche avec base dorée. Garnie d'un assortiment raffiné de 450g de chocolats fins. Son design est sublimé par une décoration en foil rouge et un ornement précieux au centre.",
+    price: "550 Dhs",
+    image: coupePiedL,
+    category: "coupes",
+    tags: ["pied", "céramique", "450g"],
+    reference: "Réf 026",
+    fullDescription: "Élégante coupe à pied de taille L en céramique blanche avec base dorée. Garnie d'un assortiment raffiné de 450g de chocolats fins. Son design est sublimé par une décoration en foil rouge et un ornement précieux au centre. Idéale pour un cadeau sophistiqué et raffiné.",
+    ingredients: "Chocolats fins variés, papiers d'emballage métalliques rouge, ornement décoratif",
+    weight: "450g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.8,
+    reviews: 42
+  },
+  {
+    id: 30,
+    name: "Coupe à pied M",
+    description: "Somptueuse coupe à pied de taille M en céramique blanche avec base dorée. Offre une sélection généreuse de 900g de nos chocolats d'exception. Son allure luxueuse avec ses ornements scintillants en fait une pièce maîtresse.",
+    price: "1100 Dhs",
+    image: coupePiedM,
+    category: "coupes",
+    tags: ["pied", "céramique", "900g"],
+    reference: "Réf 027",
+    fullDescription: "Somptueuse coupe à pied de taille M en céramique blanche avec base dorée. Offre une sélection généreuse de 900g de nos chocolats d'exception. Son allure luxueuse avec ses ornements scintillants en fait une pièce maîtresse pour toute occasion spéciale. Une présentation qui impressionnera vos invités.",
+    ingredients: "Chocolats fins variés, papiers d'emballage métalliques rouge, ornement décoratif précieux",
+    weight: "900g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.9,
+    reviews: 58
+  },
+  {
+    id: 31,
+    name: "Coupe Prestige Gold M",
+    description: "Coupe prestige dorée de taille moyenne. Assortiment généreux de 900g de chocolats variés incluant des pralines, des chocolats enrobés de foil vert émeraude et doré, ainsi que des chocolats blancs. Ornée d'un ornement précieux.",
+    price: "1300 Dhs",
+    image: coupePrestigeGoldM,
+    category: "coupes",
+    tags: ["prestige", "gold", "900g"],
+    reference: "Réf 028",
+    fullDescription: "Coupe prestige dorée de taille moyenne. Assortiment généreux de 900g de chocolats variés incluant des pralines, des chocolats enrobés de foil vert émeraude et doré, ainsi que des chocolats blancs. Ornée d'un ornement précieux en forme de bijou. Une création luxueuse qui allie élégance et gourmandise.",
+    ingredients: "Pralines, chocolats enrobés de foil vert émeraude et doré, chocolats blancs, ornement décoratif",
+    weight: "900g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.9,
+    reviews: 63
+  },
+  {
+    id: 32,
+    name: "Coupe Royale Gold L",
+    description: "Coupe royale dorée de grande taille. Assortiment exceptionnel de 1.1kg de chocolats premium incluant des pralines, des chocolats enrobés de foil vert émeraude et doré, ainsi que des chocolats blancs. Le summum du luxe.",
+    price: "1500 Dhs",
+    image: coupeRoyaleGoldL,
+    category: "coupes",
+    tags: ["royale", "gold", "1.1kg"],
+    reference: "Réf 029",
+    fullDescription: "Coupe royale dorée de grande taille. Assortiment exceptionnel de 1.1kg de chocolats premium incluant des pralines, des chocolats enrobés de foil vert émeraude et doré, ainsi que des chocolats blancs. Ornée d'un ornement précieux en forme de bijou. Le summum du luxe et de l'élégance pour les occasions les plus prestigieuses.",
+    ingredients: "Pralines premium, chocolats enrobés de foil vert émeraude et doré, chocolats blancs, ornement décoratif précieux",
+    weight: "1.1kg",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 5.0,
+    reviews: 76
+  },
+  {
+    id: 33,
+    name: "Coupe Fedda M",
+    description: "Coupe Fedda argentée de taille moyenne avec poignées dorées et base dorée ornée. Assortiment raffiné de 650g de chocolats incluant des bonbons enrobés de foil doré avec embellissements, des pralines et des chocolats blancs.",
+    price: "1650 Dhs",
+    image: coupeFeddaM,
+    category: "coupes",
+    tags: ["fedda", "argentée", "650g"],
+    reference: "Réf 033",
+    fullDescription: "Coupe Fedda argentée de taille moyenne avec poignées dorées et base dorée ornée. Assortiment raffiné de 650g de chocolats incluant des bonbons enrobés de foil doré avec embellissements scintillants, des pralines et des chocolats blancs avec nappage au centre. Design luxueux et élégant qui allie modernité et tradition.",
+    ingredients: "Bonbons enrobés de foil doré avec embellissements, pralines, chocolats blancs avec nappage",
+    weight: "650g",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 4.8,
+    reviews: 49
+  },
+  {
+    id: 34,
+    name: "Coupe Fedda L",
+    description: "Grande coupe Fedda argentée avec accents dorés et base dorée ornée. Assortiment exceptionnel de 1.1kg de chocolats premium incluant des bonbons enrobés de foil doré avec embellissements, des pralines et des chocolats blancs.",
+    price: "1950 Dhs",
+    image: coupeFeddaL,
+    category: "coupes",
+    tags: ["fedda", "argentée", "1.1kg"],
+    reference: "Réf 034",
+    fullDescription: "Grande coupe Fedda argentée avec accents dorés et base dorée ornée. Assortiment exceptionnel de 1.1kg de chocolats premium incluant des bonbons enrobés de foil doré avec embellissements scintillants, des pralines et des chocolats blancs avec nappage. Design luxueux et élégant qui allie modernité et tradition. Le cadeau parfait pour les grandes occasions.",
+    ingredients: "Bonbons enrobés de foil doré avec embellissements, pralines premium, chocolats blancs avec nappage",
+    weight: "1.1kg",
+    allergens: "Contient du lait et peut contenir des traces de noix",
+    rating: 5.0,
+    reviews: 68
   },
   // Coffrets
   {
@@ -293,6 +620,18 @@ const ProductDetails = () => {
               <h1 className="text-4xl font-serif font-bold text-chocolate mb-4">
                 {product.name}
               </h1>
+              {(product as any).reference && (
+                <div className="flex items-center gap-3 mb-4">
+                  <Badge className="bg-orange-100 text-orange-800 px-3 py-1">
+                    {(product as any).reference}
+                  </Badge>
+                  {(product as any).weight && (
+                    <span className="text-sm text-muted-foreground">
+                      {(product as any).weight}
+                    </span>
+                  )}
+                </div>
+              )}
               <p className="text-xl text-muted-foreground mb-6">
                 {product.description}
               </p>
