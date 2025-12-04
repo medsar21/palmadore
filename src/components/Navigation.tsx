@@ -58,7 +58,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center transition-transform hover:scale-105">
-            <img src={logoImage} alt="Palmador" className="h-12 sm:h-16 drop-shadow" />
+            <img src={logoImage} alt="Palmador" className="h-12 sm:h-16 drop-shadow" loading="eager" />
           </Link>
 
           {/* Desktop Navigation */}

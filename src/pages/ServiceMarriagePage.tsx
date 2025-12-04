@@ -9,7 +9,7 @@ import { Calendar, Heart, ArrowLeft, Users, Star, CheckCircle } from "lucide-rea
 import coffretLarge from "@/assets/Artboard 18.png";
 import coupeAudaceGold from "@/assets/Artboard 12.png";
 import barCaramel from "@/assets/Artboard 8.png";
-import cImage from "@/assets/Artboard 19.png";
+import cImage from "@/assets/c.jpg";
 
 const ServiceMarriagePage = () => {
   const navigate = useNavigate();
@@ -125,6 +125,8 @@ const ServiceMarriagePage = () => {
                       src={rec.image} 
                       alt={rec.product}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <CardContent className="p-6">

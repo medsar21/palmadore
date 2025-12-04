@@ -14,11 +14,11 @@ import coupeEmpreinteCopper from "@/assets/Artboard 14.png";
 import barCaramel from "@/assets/Artboard 8.png";
 import barPistache from "@/assets/Artboard 11.png";
 
-// Nouvelles images de tables
-import cImage from "@/assets/Artboard 19.png";
-import ccImage from "@/assets/Artboard 20.png";
-import cccImage from "@/assets/Artboard 1.png";
-import tableImage from "@/assets/Artboard 2.png";
+// Images de tables
+import cImage from "@/assets/c.jpg";
+import ccImage from "@/assets/cc.jpg";
+import cccImage from "@/assets/ccc.jpg";
+import tableImage from "@/assets/c.jpg";
 
 interface ServiceArticle {
   id: string;
@@ -282,6 +282,8 @@ const ServicesPage = () => {
                       src={service.image} 
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-[hsl(var(--copper))] text-white flex items-center gap-2">

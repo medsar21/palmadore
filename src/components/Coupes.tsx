@@ -263,6 +263,8 @@ const Coupes = () => {
                   src={coupe.image}
                   alt={`${coupe.name} - ${coupe.description}`}
                   className="w-full h-full object-contain p-4 sm:p-6 md:p-8 transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <CardContent className="p-4 sm:p-5 md:p-6 text-center">

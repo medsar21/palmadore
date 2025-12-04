@@ -600,6 +600,8 @@ const ProductDetails = () => {
                 src={product.image}
                 alt={product.name}
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
               />
             </div>
             <div className="flex gap-2">
@@ -771,6 +773,8 @@ const ProductDetails = () => {
                       src={suggestedProduct.image}
                       alt={suggestedProduct.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <CardContent className="p-3 sm:p-4">

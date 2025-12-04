@@ -48,6 +48,8 @@ const ChocolateBars = () => {
                   src={bar.image}
                   alt={`Tablette ${bar.name}`}
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-chocolate/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>

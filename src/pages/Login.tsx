@@ -18,7 +18,7 @@ const Login = () => {
       <Card className="w-full max-w-md bg-card/90 backdrop-blur-sm shadow-elegant border-none">
         <CardContent className="p-8">
           <div className="flex flex-col items-center mb-6">
-            <img src={logoImage} alt="Palmador" className="h-14 mb-2" />
+            <img src={logoImage} alt="Palmador" className="h-14 mb-2" loading="eager" />
             <h1 className="text-2xl font-serif font-semibold text-chocolate">Connexion</h1>
           </div>
           <form onSubmit={onSubmit} className="space-y-5">

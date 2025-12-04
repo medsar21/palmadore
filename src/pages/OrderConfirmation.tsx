@@ -59,6 +59,8 @@ const OrderConfirmation = () => {
                     src={product.image}
                     alt={product.name}
                     className="w-20 h-20 object-cover rounded-lg"
+                    loading="eager"
+                    decoding="async"
                   />
                   <div className="flex-1">
                     <h3 className="font-semibold text-chocolate mb-2">{product.name}</h3>

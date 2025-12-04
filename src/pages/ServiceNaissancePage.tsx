@@ -9,7 +9,7 @@ import { Calendar, Baby, ArrowLeft, Star, CheckCircle } from "lucide-react";
 import coffretMedium from "@/assets/Artboard 17.png";
 import coffretSmall from "@/assets/Artboard 16.png";
 import coupeEmpreinteCopper from "@/assets/Artboard 14.png";
-import cccImage from "@/assets/Artboard 1.png";
+import cccImage from "@/assets/ccc.jpg";
 
 const ServiceNaissancePage = () => {
   const navigate = useNavigate();
@@ -124,6 +124,8 @@ const ServiceNaissancePage = () => {
                       src={rec.image} 
                       alt={rec.product}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <CardContent className="p-6">

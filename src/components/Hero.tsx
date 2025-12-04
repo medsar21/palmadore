@@ -78,6 +78,8 @@ const Hero = () => {
               src={slide.image} 
               alt={`Palmador Chocolatier - ${slide.title}`}
               className="w-full h-full object-cover"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
           </div>

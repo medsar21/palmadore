@@ -26,6 +26,7 @@ const Loading = () => {
           src={logoImage} 
           alt="Palmador" 
           className="h-16 sm:h-20 drop-shadow-lg animate-fade-in"
+          loading="eager"
         />
       </div>
 

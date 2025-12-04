@@ -46,6 +46,8 @@ const AboutPage = () => {
                 src={heroChocolate} 
                 alt="Notre histoire chocolat" 
                 className="w-full h-96 object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-chocolate/60 to-transparent" />
             </div>
