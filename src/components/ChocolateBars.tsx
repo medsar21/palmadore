@@ -1,15 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import barCaramel from "@/assets/bar-caramel.jpg";
-import barSpeculoos from "@/assets/bar-speculoos.jpg";
-import barCitron from "@/assets/bar-citron.jpg";
-import barPistache from "@/assets/bar-pistache.jpg";
+import kunafaPistache from "@/assets/kunafa.png";
 
 const bars = [
-  { id: 1, name: "Caramel", image: barCaramel },
-  { id: 2, name: "Spéculoos", image: barSpeculoos },
-  { id: 3, name: "Citron", image: barCitron },
-  { id: 4, name: "Pistache", image: barPistache },
+  { id: 1, name: "Kunafa Pistache", image: kunafaPistache },
 ];
 
 const ChocolateBars = () => {
@@ -35,7 +29,7 @@ const ChocolateBars = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 max-w-md mx-auto">
           {bars.map((bar, index) => (
             <div
               key={bar.id}

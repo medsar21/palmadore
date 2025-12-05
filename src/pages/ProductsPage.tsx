@@ -21,21 +21,23 @@ import coupeTresorL from "@/assets/Artboard 20.png";
 import coupeAudaceS from "@/assets/Artboard 1.png";
 import coupeAudaceM from "@/assets/Artboard 2.png";
 import coupeAudaceL from "@/assets/Artboard 3.png";
+import boite1 from "@/assets/Artboard 6.png";
+import boite2 from "@/assets/Artboard 3.png";
 import oumnia from "@/assets/Artboard 4.png";
 import oumniaL from "@/assets/Artboard 5.png";
-import coupeOvalS from "@/assets/Artboard 6.png";
-import coupeOvalM from "@/assets/Artboard 7.png";
-import serviteur from "@/assets/Artboard 8.png";
-import barCaramel from "@/assets/bar-caramel.jpg";
-import barSpeculoos from "@/assets/bar-speculoos.jpg";
-import barCitron from "@/assets/bar-citron.jpg";
-import barPistache from "@/assets/bar-pistache.jpg";
-import coupePiedL from "@/assets/Artboard 9.png";
-import coupePiedM from "@/assets/Artboard 10.png";
-import coupePrestigeGoldM from "@/assets/Artboard 11.png";
-import coupeRoyaleGoldL from "@/assets/Artboard 9.png";
-import coupeFeddaM from "@/assets/Artboard 10.png";
-import coupeFeddaL from "@/assets/Artboard 11.png";
+import coupeOvalS from "@/assets/Artboard 18.png";
+import coupeOvalM from "@/assets/Artboard 17.png";
+import serviteur from "@/assets/Artboard 16.png";
+import kunafaPistache from "@/assets/kunafa.png";
+import coupePiedL from "@/assets/Artboard 12.png";
+import coupePiedM from "@/assets/Artboard 13.png";
+import coupePrestigeGoldM from "@/assets/Artboard 19.png";
+import coupeRoyaleGoldL from "@/assets/Artboard 20.png";
+import coupeFeddaM from "@/assets/Artboard 14.png";
+import coupeFeddaL from "@/assets/Artboard 15.png";
+import coupeRayeeS from "@/assets/coupe.png";
+import coupeRayeeM from "@/assets/coupe 2.png";
+import coupeRayeeL from "@/assets/coupe 3.png";
 import coffretSmall from "@/assets/Artboard 16.png";
 import coffretMedium from "@/assets/Artboard 17.png";
 import coffretLarge from "@/assets/Artboard 18.png";
@@ -101,62 +103,50 @@ const allProducts = [
   // Tablettes
   {
     id: 6,
-    name: "Tablette Caramel",
-    description: "Tablette au caramel beurre salé",
-    price: "120 Dhs",
-    image: barCaramel,
+    name: "Tablette Kunafa Pistache",
+    description: "Tablette artisanale kunafa à la pistache d'exception",
+    price: "À partir de 140 Dhs",
+    image: kunafaPistache,
     category: "tablettes",
-    tags: ["caramel", "beurre salé"],
-  },
-  {
-    id: 7,
-    name: "Tablette Spéculoos",
-    description: "Tablette aux biscuits spéculoos",
-    price: "130 Dhs",
-    image: barSpeculoos,
-    category: "tablettes",
-    tags: ["spéculoos", "biscuits"],
-  },
-  {
-    id: 8,
-    name: "Tablette Citron",
-    description: "Tablette au citron confit",
-    price: "125 Dhs",
-    image: barCitron,
-    category: "tablettes",
-    tags: ["citron", "confit"],
-  },
-  {
-    id: 9,
-    name: "Tablette Pistache",
-    description: "Tablette à la pistache d'Iran",
-    price: "140 Dhs",
-    image: barPistache,
-    category: "tablettes",
-    tags: ["pistache", "Iran"],
-  },
-  {
-    id: 10,
-    name: "Tablette Noisette",
-    description: "Tablette aux noisettes grillées",
-    price: "135 Dhs",
-    image: barCaramel,
-    category: "tablettes",
-    tags: ["noisette", "grillé"],
-  },
-  {
-    id: 11,
-    name: "Tablette Framboise",
-    description: "Tablette aux framboises séchées",
-    price: "145 Dhs",
-    image: barSpeculoos,
-    category: "tablettes",
-    tags: ["framboise", "fruit"],
+    tags: ["kunafa", "pistache", "artisanale"],
   },
 
   // Coupes
   {
     id: 12,
+    name: "Coupe Rayé S",
+    description: "Coupe élégante avec base bleu-vert translucide. Assortiment de 150g de chocolats fins emballés dans des papiers bleu-vert et dorés.",
+    price: "220 Dhs",
+    image: coupeRayeeS,
+    category: "coupes",
+    tags: ["rayé", "bleu-vert", "150g"],
+    reference: "Réf 020",
+    weight: "150g",
+  },
+  {
+    id: 13,
+    name: "Coupe Rayé M",
+    description: "Coupe élégante moyenne avec base bleu-vert translucide sur support doré. Assortiment généreux de 300g de chocolats fins avec emballages bleu-vert.",
+    price: "350 Dhs",
+    image: coupeRayeeM,
+    category: "coupes",
+    tags: ["rayé", "bleu-vert", "300g"],
+    reference: "Réf 021",
+    weight: "300g",
+  },
+  {
+    id: 14,
+    name: "Coupe Rayé L",
+    description: "Grande coupe élégante avec base bleu-vert translucide sur support doré. Assortiment premium de 700g de chocolats fins avec double couche d'emballages bleu-vert et dorés.",
+    price: "750 Dhs",
+    image: coupeRayeeL,
+    category: "coupes",
+    tags: ["rayé", "bleu-vert", "700g"],
+    reference: "Réf 022",
+    weight: "700g",
+  },
+  {
+    id: 15,
     name: "Coupe Élégance S",
     description: "Coupe élégante en porcelaine blanche avec base dorée. Assortiment de 150g de chocolats fins emballés dans des papiers dorés, verts et bruns.",
     price: "200 Dhs",
@@ -167,29 +157,7 @@ const allProducts = [
     weight: "150g",
   },
   {
-    id: 13,
-    name: "Coupe Élégance M",
-    description: "Coupe élégante moyenne en porcelaine blanche avec base dorée. Assortiment généreux de 350g de chocolats fins disposés en couches concentriques.",
-    price: "350 Dhs",
-    image: coupeEleganceM,
-    category: "coupes",
-    tags: ["élégance", "porcelaine", "350g"],
-    reference: "Réf 036",
-    weight: "350g",
-  },
-  {
-    id: 14,
-    name: "Coupe Élégance L",
-    description: "Grande coupe élégante en porcelaine blanche avec base dorée. Assortiment premium de 650g de chocolats fins arrangés en dôme élégant.",
-    price: "750 Dhs",
-    image: coupeEleganceL,
-    category: "coupes",
-    tags: ["élégance", "porcelaine", "650g"],
-    reference: "Réf 037",
-    weight: "650g",
-  },
-  {
-    id: 15,
+    id: 18,
     name: "Coupe Émeraude S",
     description: "Coupe émeraude petite avec base dorée sphérique. Assortiment de 350g de chocolats carrés emballés dans des papiers dorés et vert émeraude.",
     price: "350 Dhs",
@@ -202,38 +170,38 @@ const allProducts = [
   {
     id: 16,
     name: "Coupe Émeraude M",
-    description: "Coupe émeraude moyenne avec base dorée sphérique. Assortiment généreux de 650g de chocolats carrés emballés dans des papiers dorés et vert émeraude.",
-    price: "750 Dhs",
-    image: coupeEmeraudeM,
+    description: "Serviteur à deux étages circulaires en porcelaine blanche avec bordures dorées. Assortiment exceptionnel de 1.1kg de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés, arrangés en cercles concentriques avec élément décoratif central.",
+    price: "1200 Dhs",
+    image: serviteur,
     category: "coupes",
-    tags: ["émeraude", "dorée", "650g"],
-    reference: "Réf 039",
-    weight: "650g",
+    tags: ["serviteur", "deux étages", "1.1kg"],
+    reference: "Réf 025",
+    weight: "1.1kg",
   },
   {
     id: 17,
-    name: "Coupe Prestige",
-    description: "Coupe prestige en or texturé avec motif tissé. Assortiment de 500g de chocolats rectangulaires emballés dans des papiers dorés et orange.",
+    name: "Coupe Oval S",
+    description: "Coupe ovale petite en porcelaine blanche. Assortiment de 600g de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés, avec pralines au centre.",
     price: "650 Dhs",
-    image: coupePrestige,
+    image: coupeOvalS,
     category: "coupes",
-    tags: ["prestige", "dorée", "500g"],
-    reference: "Réf 040",
-    weight: "500g",
-  },
-  {
-    id: 18,
-    name: "Coupe Prestige L",
-    description: "Grande coupe prestige en or texturé avec motif tissé. Assortiment premium de 900g de chocolats rectangulaires emballés dans des papiers dorés et orange.",
-    price: "950 Dhs",
-    image: coupePrestigeL,
-    category: "coupes",
-    tags: ["prestige", "dorée", "900g"],
-    reference: "Réf 041",
-    weight: "900g",
+    tags: ["ovale", "porcelaine", "600g"],
+    reference: "Réf 023",
+    weight: "600g",
   },
   {
     id: 19,
+    name: "Coupe Oval M",
+    description: "Coupe ovale moyenne en porcelaine blanche. Assortiment généreux de 900g de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés, avec pralines texturées et noisettes au centre.",
+    price: "950 Dhs",
+    image: coupeOvalM,
+    category: "coupes",
+    tags: ["ovale", "porcelaine", "900g"],
+    reference: "Réf 024",
+    weight: "900g",
+  },
+  {
+    id: 20,
     name: "Coupe Tresor M",
     description: "Coupe trésor moyenne sur plateau gris argenté avec pieds dorés. Assortiment de 800g de chocolats carrés emballés dans des papiers bleu royal et blanc.",
     price: "1100 Dhs",
@@ -244,7 +212,7 @@ const allProducts = [
     weight: "800g",
   },
   {
-    id: 20,
+    id: 21,
     name: "Coupe Tresor L",
     description: "Grande coupe trésor sur plateau gris argenté avec pieds dorés. Assortiment exceptionnel de 1400g de chocolats carrés emballés dans des papiers bleu royal, blanc et doré.",
     price: "1650 Dhs",
@@ -255,7 +223,7 @@ const allProducts = [
     weight: "1400g",
   },
   {
-    id: 21,
+    id: 22,
     name: "Coupe Audace S",
     description: "Coupe audace petite avec base dorée circulaire et support argenté. Assortiment de 850g de chocolats carrés emballés dans des papiers rouge vif et blanc.",
     price: "1200 Dhs",
@@ -266,7 +234,7 @@ const allProducts = [
     weight: "850g",
   },
   {
-    id: 22,
+    id: 23,
     name: "Coupe Audace M",
     description: "Coupe audace moyenne avec base dorée circulaire et support argenté. Assortiment généreux de 1500g de chocolats carrés emballés dans des papiers rouge vif et blanc.",
     price: "1800 Dhs",
@@ -277,7 +245,7 @@ const allProducts = [
     weight: "1500g",
   },
   {
-    id: 23,
+    id: 24,
     name: "Coupe Audace L",
     description: "Grande coupe audace avec base dorée circulaire et support argenté. Assortiment exceptionnel de 2300g de chocolats carrés emballés dans des papiers rouge vif et blanc.",
     price: "2600 Dhs",
@@ -288,7 +256,7 @@ const allProducts = [
     weight: "2300g",
   },
   {
-    id: 24,
+    id: 25,
     name: "Oumnia",
     description: "Boîte cadeau élégante en crème avec intérieur doré et couvercle orné. Assortiment de 300g de chocolats carrés emballés dans des papiers vert-bleu sarcelle et argenté.",
     price: "550 Dhs",
@@ -299,7 +267,7 @@ const allProducts = [
     weight: "300g",
   },
   {
-    id: 25,
+    id: 26,
     name: "Oumnia L",
     description: "Grande boîte cadeau élégante en crème avec intérieur doré et couvercle orné. Assortiment généreux de 700g de chocolats carrés emballés dans des papiers vert-bleu sarcelle et argenté.",
     price: "950 Dhs",
@@ -310,31 +278,9 @@ const allProducts = [
     weight: "700g",
   },
   {
-    id: 26,
-    name: "Coupe Oval S",
-    description: "Coupe ovale petite en porcelaine blanche. Assortiment de 600g de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés.",
-    price: "650 Dhs",
-    image: coupeOvalS,
-    category: "coupes",
-    tags: ["ovale", "porcelaine", "600g"],
-    reference: "Réf 023",
-    weight: "600g",
-  },
-  {
-    id: 27,
-    name: "Coupe Oval M",
-    description: "Coupe ovale moyenne en porcelaine blanche. Assortiment généreux de 900g de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés.",
-    price: "950 Dhs",
-    image: coupeOvalM,
-    category: "coupes",
-    tags: ["ovale", "porcelaine", "900g"],
-    reference: "Réf 024",
-    weight: "900g",
-  },
-  {
-    id: 28,
+    id: 29,
     name: "Serviteur",
-    description: "Serviteur à deux étages circulaires en porcelaine blanche avec bordures dorées. Assortiment exceptionnel de 1.1kg de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés.",
+    description: "Serviteur à deux étages circulaires en porcelaine blanche avec bordures dorées. Assortiment exceptionnel de 1.1kg de chocolats emballés dans des papiers métalliques dorés, cuivrés et argentés, arrangés en cercles concentriques avec élément décoratif central.",
     price: "1200 Dhs",
     image: serviteur,
     category: "coupes",
@@ -343,9 +289,9 @@ const allProducts = [
     weight: "1.1kg",
   },
   {
-    id: 29,
-    name: "Coupe à pied L",
-    description: "Élégante coupe à pied de taille L en céramique blanche avec base dorée. Garnie d'un assortiment raffiné de 450g de chocolats fins. Son design est sublimé par une décoration en foil rouge et un ornement précieux au centre.",
+    id: 30,
+    name: "Coupe à pied",
+    description: "Élégante coupe à pied en céramique blanche avec base dorée. Garnie d'un assortiment raffiné de 450g de chocolats fins. Son design est sublimé par une décoration en foil rouge bordeaux et un ornement doré précieux au centre.",
     price: "550 Dhs",
     image: coupePiedL,
     category: "coupes",
@@ -354,9 +300,9 @@ const allProducts = [
     weight: "450g",
   },
   {
-    id: 30,
-    name: "Coupe à pied M",
-    description: "Somptueuse coupe à pied de taille M en céramique blanche avec base dorée. Offre une sélection généreuse de 900g de nos chocolats d'exception. Son allure luxueuse avec ses ornements scintillants en fait une pièce maîtresse.",
+    id: 31,
+    name: "Coupe à pied",
+    description: "Somptueuse coupe à pied en céramique blanche avec base dorée. Offre une sélection généreuse de 900g de nos chocolats d'exception avec chocolats rectangulaires en foil doré et chocolats variés au centre. Son allure luxueuse avec ses ornements scintillants en fait une pièce maîtresse.",
     price: "1100 Dhs",
     image: coupePiedM,
     category: "coupes",
@@ -365,7 +311,7 @@ const allProducts = [
     weight: "900g",
   },
   {
-    id: 31,
+    id: 32,
     name: "Coupe Prestige Gold M",
     description: "Coupe prestige dorée de taille moyenne. Assortiment généreux de 900g de chocolats variés incluant des pralines, des chocolats enrobés de foil vert émeraude et doré, ainsi que des chocolats blancs. Ornée d'un ornement précieux.",
     price: "1300 Dhs",
@@ -376,7 +322,7 @@ const allProducts = [
     weight: "900g",
   },
   {
-    id: 32,
+    id: 35,
     name: "Coupe Royale Gold L",
     description: "Coupe royale dorée de grande taille. Assortiment exceptionnel de 1.1kg de chocolats premium incluant des pralines, des chocolats enrobés de foil vert émeraude et doré, ainsi que des chocolats blancs. Le summum du luxe.",
     price: "1500 Dhs",
@@ -387,7 +333,7 @@ const allProducts = [
     weight: "1.1kg",
   },
   {
-    id: 33,
+    id: 36,
     name: "Coupe Fedda M",
     description: "Coupe Fedda argentée de taille moyenne avec poignées dorées et base dorée ornée. Assortiment raffiné de 650g de chocolats incluant des bonbons enrobés de foil doré avec embellissements, des pralines et des chocolats blancs.",
     price: "1650 Dhs",
@@ -398,7 +344,7 @@ const allProducts = [
     weight: "650g",
   },
   {
-    id: 34,
+    id: 37,
     name: "Coupe Fedda L",
     description: "Grande coupe Fedda argentée avec accents dorés et base dorée ornée. Assortiment exceptionnel de 1.1kg de chocolats premium incluant des bonbons enrobés de foil doré avec embellissements, des pralines et des chocolats blancs.",
     price: "1950 Dhs",
@@ -411,7 +357,7 @@ const allProducts = [
 
   // Coffrets
   {
-    id: 18,
+    id: 35,
     name: "Coffret Découverte",
     description: "Coffret petit format - 12 pièces",
     price: "180 Dhs",
@@ -420,7 +366,7 @@ const allProducts = [
     tags: ["découverte", "12 pièces"],
   },
   {
-    id: 19,
+    id: 36,
     name: "Coffret Prestige",
     description: "Coffret moyen format - 24 pièces",
     price: "320 Dhs",
@@ -429,7 +375,7 @@ const allProducts = [
     tags: ["prestige", "24 pièces"],
   },
   {
-    id: 20,
+    id: 37,
     name: "Volupté - 450 Grs",
     description: "plateau en cuir bicolore (petit)",
     price: "700.00 Dhs",
@@ -438,7 +384,7 @@ const allProducts = [
     tags: ["plateau", "cuir"],
   },
   {
-    id: 21,
+    id: 38,
     name: "Volupté - 1kg",
     description: "plateau en cuir bicolore (moyen)",
     price: "1500.00 Dhs",
@@ -447,7 +393,7 @@ const allProducts = [
     tags: ["plateau", "cuir"],
   },
   {
-    id: 22,
+    id: 39,
     name: "Volupté - 2kg",
     description: "plateau en cuir bicolore (grand)",
     price: "2600.00 Dhs",
@@ -458,49 +404,22 @@ const allProducts = [
 
   // Boîtes
   {
-    id: 23,
-    name: "Boîte Classique",
-    description: "Boîte en carton recyclé",
-    price: "45 Dhs",
-    image: coffretSmall,
-    category: "boites",
-    tags: ["classique", "recyclé"],
-  },
-  {
-    id: 24,
+    id: 40,
     name: "Boîte Premium",
-    description: "Boîte en carton premium",
+    description: "Boîte élégante pour vos chocolats",
     price: "65 Dhs",
-    image: coffretMedium,
+    image: boite1,
     category: "boites",
-    tags: ["premium", "carton"],
+    tags: ["premium", "élégante"],
   },
   {
-    id: 25,
-    name: "Boîte Métal",
-    description: "Boîte en métal étamé",
-    price: "85 Dhs",
-    image: coffretLarge,
-    category: "boites",
-    tags: ["métal", "étamé"],
-  },
-  {
-    id: 26,
-    name: "Boîte Bois",
-    description: "Boîte en bois massif",
-    price: "120 Dhs",
-    image: coffretSmall,
-    category: "boites",
-    tags: ["bois", "massif"],
-  },
-  {
-    id: 27,
+    id: 41,
     name: "Boîte Cadeau",
-    description: "Boîte cadeau avec ruban",
+    description: "Boîte cadeau raffinée",
     price: "55 Dhs",
-    image: coffretMedium,
+    image: boite2,
     category: "boites",
-    tags: ["cadeau", "ruban"],
+    tags: ["cadeau", "raffinée"],
   },
 
 ];
@@ -700,11 +619,11 @@ const ProductsPage = () => {
                   className="group overflow-hidden border-2 border-gray-100 bg-white shadow-lg hover:shadow-2xl transition-all duration-500 animate-scale-in h-full flex flex-col hover:border-chocolate/20 hover:-translate-y-2"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="relative overflow-hidden aspect-square">
+                  <div className="relative overflow-hidden aspect-square bg-secondary/10 flex items-center justify-center">
                     <img 
                       src={product.image} 
                       alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-contain p-2 transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                       decoding="async"
                     />

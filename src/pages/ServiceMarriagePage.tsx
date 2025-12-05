@@ -8,7 +8,7 @@ import { Calendar, Heart, ArrowLeft, Users, Star, CheckCircle } from "lucide-rea
 // Images des produits pour les mariages
 import coffretLarge from "@/assets/Artboard 18.png";
 import coupeAudaceGold from "@/assets/Artboard 12.png";
-import barCaramel from "@/assets/Artboard 8.png";
+import kunafaPistache from "@/assets/kunafa.png";
 import cImage from "@/assets/c.jpg";
 
 const ServiceMarriagePage = () => {
@@ -35,9 +35,9 @@ const ServiceMarriagePage = () => {
       description: "Une présentation luxueuse et romantique qui impressionnera vos invités avec des chocolats d'exception."
     },
     {
-      product: "Tablettes Personnalisées",
-      image: barCaramel,
-      description: "Des tablettes artisanales personnalisées avec vos initiales, parfaites comme cadeaux d'invités."
+      product: "Tablette Kunafa Pistache",
+      image: kunafaPistache,
+      description: "Tablette artisanale kunafa à la pistache d'exception, parfaite comme cadeau d'invités."
     }
   ];
 

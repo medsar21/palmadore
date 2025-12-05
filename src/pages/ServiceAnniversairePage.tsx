@@ -7,7 +7,7 @@ import { Calendar, Cake, ArrowLeft, Star, CheckCircle } from "lucide-react";
 
 // Images des produits pour les anniversaires
 import coffretLarge from "@/assets/Artboard 18.png";
-import barPistache from "@/assets/Artboard 11.png";
+import kunafaPistache from "@/assets/kunafa.png";
 import coupeAudaceGold from "@/assets/Artboard 12.png";
 import cImage from "@/assets/c.jpg";
 
@@ -30,9 +30,9 @@ const ServiceAnniversairePage = () => {
       description: "Le cadeau parfait avec 24 chocolats variés pour satisfaire tous les invités."
     },
     {
-      product: "Tablette Pistache Artisanale",
-      image: barPistache,
-      description: "Une tablette gourmande et originale pour accompagner le gâteau d'anniversaire."
+      product: "Tablette Kunafa Pistache",
+      image: kunafaPistache,
+      description: "Tablette artisanale kunafa à la pistache d'exception, parfaite pour accompagner le gâteau d'anniversaire."
     },
     {
       product: "Table Prestige",

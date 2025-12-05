@@ -11,8 +11,7 @@ import coffretMedium from "@/assets/Artboard 17.png";
 import coffretSmall from "@/assets/Artboard 16.png";
 import coupeAudaceGold from "@/assets/Artboard 12.png";
 import coupeEmpreinteCopper from "@/assets/Artboard 14.png";
-import barCaramel from "@/assets/Artboard 8.png";
-import barPistache from "@/assets/Artboard 11.png";
+import kunafaPistache from "@/assets/kunafa.png";
 
 // Images de tables
 import cImage from "@/assets/c.jpg";
@@ -66,9 +65,9 @@ const services: ServiceArticle[] = [
         description: "Une présentation luxueuse et romantique qui impressionnera vos invités avec des chocolats d'exception."
       },
       {
-        product: "Tablettes Personnalisées",
-        image: barCaramel,
-        description: "Des tablettes artisanales personnalisées avec vos initiales, parfaites comme cadeaux d'invités."
+        product: "Tablette Kunafa Pistache",
+        image: kunafaPistache,
+        description: "Tablette artisanale kunafa à la pistache d'exception, parfaite comme cadeau d'invités."
       }
     ],
     tips: [
@@ -107,9 +106,9 @@ const services: ServiceArticle[] = [
         description: "Une présentation luxueuse qui impressionnera vos invités avec des chocolats d'exception."
       },
       {
-        product: "Tablettes Caramel Premium",
-        image: barCaramel,
-        description: "Des tablettes artisanales parfaites comme cadeaux d'invités personnalisés."
+        product: "Tablette Kunafa Pistache",
+        image: kunafaPistache,
+        description: "Tablette artisanale kunafa à la pistache d'exception, parfaite comme cadeau d'invités."
       }
     ],
     tips: [
@@ -182,9 +181,9 @@ const services: ServiceArticle[] = [
         description: "Le cadeau parfait avec 24 chocolats variés pour satisfaire tous les invités."
       },
       {
-        product: "Tablette Pistache Artisanale",
-        image: barPistache,
-        description: "Une tablette gourmande et originale pour accompagner le gâteau d'anniversaire."
+        product: "Tablette Kunafa Pistache",
+        image: kunafaPistache,
+        description: "Tablette artisanale kunafa à la pistache d'exception, parfaite pour accompagner le gâteau d'anniversaire."
       },
       {
         product: "Table Prestige",

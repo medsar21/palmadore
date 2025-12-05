@@ -8,7 +8,7 @@ import { Calendar, Heart, ArrowLeft, Star, CheckCircle } from "lucide-react";
 // Images des produits pour les fiançailles
 import coffretLarge from "@/assets/Artboard 18.png";
 import coupeAudaceGold from "@/assets/Artboard 12.png";
-import barCaramel from "@/assets/Artboard 8.png";
+import kunafaPistache from "@/assets/kunafa.png";
 import ccImage from "@/assets/cc.jpg";
 
 const ServiceFiancaillesPage = () => {
@@ -35,9 +35,9 @@ const ServiceFiancaillesPage = () => {
       description: "Une présentation luxueuse qui impressionnera vos invités avec des chocolats d'exception."
     },
     {
-      product: "Tablettes Caramel Premium",
-      image: barCaramel,
-      description: "Des tablettes artisanales parfaites comme cadeaux d'invités personnalisés."
+      product: "Tablette Kunafa Pistache",
+      image: kunafaPistache,
+      description: "Tablette artisanale kunafa à la pistache d'exception, parfaite comme cadeau d'invités."
     }
   ];
 
