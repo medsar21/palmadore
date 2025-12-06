@@ -4,6 +4,7 @@ import ChocolateBars from "@/components/ChocolateBars";
 import Coffrets from "@/components/Coffrets";
 import Coupes from "@/components/Coupes";
 import Tablettes from "@/components/Tablettes";
+import CAN2026 from "@/components/CAN2026";
 import Events from "@/components/Events";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
       <Coffrets />
       <Coupes />
       <Tablettes />
+      <CAN2026 />
       <Events />
     </>
   );
