@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ChocolateBars from "@/components/ChocolateBars";
 import Coffrets from "@/components/Coffrets";
 import Coupes from "@/components/Coupes";
+import Tablettes from "@/components/Tablettes";
 import Events from "@/components/Events";
 
 const Index = () => {
@@ -12,6 +13,7 @@ const Index = () => {
       <ChocolateBars />
       <Coffrets />
       <Coupes />
+      <Tablettes />
       <Events />
     </>
   );

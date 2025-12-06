@@ -21,7 +21,7 @@ const boites = [
   },
 ];
 
-const ChocolateBars = () => {
+const Boites = () => {
   const navigate = useNavigate();
 
   const handleDiscoverClick = () => {
@@ -37,11 +37,11 @@ const ChocolateBars = () => {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {boites.map((boite, index) => (
             <Card
               key={boite.id}
-              className="group overflow-hidden border-none shadow-soft hover:shadow-elegant transition-all duration-300 animate-scale-in bg-background w-full sm:w-[300px] md:w-[350px]"
+              className="group overflow-hidden border-none shadow-soft hover:shadow-elegant transition-all duration-300 animate-scale-in bg-background"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden aspect-square bg-secondary/10">
@@ -98,4 +98,5 @@ const ChocolateBars = () => {
   );
 };
 
-export default ChocolateBars;
+export default Boites;
+

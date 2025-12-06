@@ -55,9 +55,7 @@ const Contact = () => {
               </div>
               <h3 className="font-semibold mb-2">Horaires</h3>
               <p className="text-white/80 text-sm">
-                Lun - Sam: 9h - 20h
-                <br />
-                Sur rendez-vous
+                10h - 20h30
               </p>
             </CardContent>
           </Card>
@@ -81,7 +79,7 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <div className="rounded-lg overflow-hidden shadow-elegant h-[400px]">
+          <div className="rounded-lg overflow-hidden shadow-elegant h-[400px] relative">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.5!2d-6.5802!3d34.2610!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDE1JzM5LjYiTiA2wrAzNCc0OC43Ilc!5e0!3m2!1sen!2sma!4v1234567890"
               width="100%"
@@ -92,6 +90,14 @@ const Contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Palmador Chocolatier Location"
             />
+            <a 
+              href="https://maps.app.goo.gl/F8Jsk3cfWADNc1ycA" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg hover:bg-gray-100 transition-colors text-sm font-semibold text-chocolate"
+            >
+              Voir sur Google Maps
+            </a>
           </div>
           <div className="flex flex-col justify-center space-y-4">
             <h3 className="text-2xl font-serif font-bold mb-4">Visitez-Nous</h3>
