@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import kunafaPistache from "@/assets/kunafa.png";
+import kunafaPistache from "@/assets/kunafa.webp";
 
 const Tablettes = () => {
   const navigate = useNavigate();

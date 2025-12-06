@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import product1 from "@/assets/Artboard 5.png";
-import product2 from "@/assets/Artboard 6.png";
-import product3 from "@/assets/Artboard 7.png";
+import product1 from "@/assets/Artboard 5.webp";
+import product2 from "@/assets/Artboard 6.webp";
+import product3 from "@/assets/Artboard 7.webp";
 
 const baseProducts = [
   {

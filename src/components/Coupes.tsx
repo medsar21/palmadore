@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import oumnia from "@/assets/Artboard 3.png";
-import oumniaL from "@/assets/Artboard 6.png";
+import oumnia from "@/assets/Artboard 3.webp";
+import oumniaL from "@/assets/Artboard 6.webp";
 
 const coffrets = [
   {

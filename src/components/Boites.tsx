@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import boite1 from "@/assets/Artboard 6.png";
-import boite2 from "@/assets/Artboard 3.png";
+import boite1 from "@/assets/Artboard 6.webp";
+import boite2 from "@/assets/Artboard 3.webp";
 
 const boites = [
   {

@@ -6,18 +6,18 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Heart, Baby, Cake, ArrowRight, ChevronLeft, Users } from "lucide-react";
 
 // Images des produits pour les événements
-import coffretLarge from "@/assets/Artboard 18.png";
-import coffretMedium from "@/assets/Artboard 17.png";
-import coffretSmall from "@/assets/Artboard 16.png";
-import coupeAudaceGold from "@/assets/Artboard 12.png";
-import coupeEmpreinteCopper from "@/assets/Artboard 14.png";
-import kunafaPistache from "@/assets/kunafa.png";
+import coffretLarge from "@/assets/Artboard 18.webp";
+import coffretMedium from "@/assets/Artboard 17.webp";
+import coffretSmall from "@/assets/Artboard 16.webp";
+import coupeAudaceGold from "@/assets/Artboard 12.webp";
+import coupeEmpreinteCopper from "@/assets/Artboard 14.webp";
+import kunafaPistache from "@/assets/kunafa.webp";
 
 // Images de tables
-import cImage from "@/assets/c.jpg";
-import ccImage from "@/assets/cc.jpg";
-import cccImage from "@/assets/ccc.jpg";
-import tableImage from "@/assets/c.jpg";
+import cImage from "@/assets/c.webp";
+import ccImage from "@/assets/cc.webp";
+import cccImage from "@/assets/ccc.webp";
+import tableImage from "@/assets/c.webp";
 
 interface ServiceArticle {
   id: string;

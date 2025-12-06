@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Cake, ArrowLeft, Star, CheckCircle } from "lucide-react";
 
 // Images des produits pour les anniversaires
-import coffretLarge from "@/assets/Artboard 18.png";
-import kunafaPistache from "@/assets/kunafa.png";
-import coupeAudaceGold from "@/assets/Artboard 12.png";
-import cImage from "@/assets/c.jpg";
+import coffretLarge from "@/assets/Artboard 18.webp";
+import kunafaPistache from "@/assets/kunafa.webp";
+import coupeAudaceGold from "@/assets/Artboard 12.webp";
+import cImage from "@/assets/c.webp";
 
 const ServiceAnniversairePage = () => {
   const navigate = useNavigate();

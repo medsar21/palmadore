@@ -8,7 +8,10 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "convert:webp": "node scripts/convert-to-webp.js",
+    "update:imports": "node scripts/update-imports-to-webp.js",
+    "optimize:images": "npm run convert:webp && npm run update:imports"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -73,9 +76,11 @@
     "eslint": "^9.32.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "glob": "^13.0.0",
     "globals": "^15.15.0",
     "lovable-tagger": "^1.1.10",
     "postcss": "^8.5.6",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",

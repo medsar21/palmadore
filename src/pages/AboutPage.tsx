@@ -1,6 +1,6 @@
 import { Award, Heart, Sparkles, Users, Coffee, Leaf } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import heroChocolate from "@/assets/Artboard 1.png";
+import heroChocolate from "@/assets/Artboard 1.webp";
 
 const AboutPage = () => {
   return (

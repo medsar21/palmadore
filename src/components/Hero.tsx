@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import heroImage1 from "@/assets/hero-chocolate.jpg";
-import heroImage2 from "@/assets/Artboard 1.png";
-import heroImage3 from "@/assets/Artboard 2.png";
-import heroImage4 from "@/assets/Artboard 3.png";
+import heroImage1 from "@/assets/hero-chocolate.webp";
+import heroImage2 from "@/assets/Artboard 1.webp";
+import heroImage3 from "@/assets/Artboard 2.webp";
+import heroImage4 from "@/assets/Artboard 3.webp";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

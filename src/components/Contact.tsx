@@ -81,7 +81,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="rounded-lg overflow-hidden shadow-elegant h-[400px] relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.5!2d-6.5802!3d34.2610!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDE1JzM5LjYiTiA2wrAzNCc0OC43Ilc!5e0!3m2!1sen!2sma!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.5!2d-6.5818985!3d34.2565452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda759978454c131%3A0x18b54aa81e487cf!2sPalmador%20Chocolatier!5e0!3m2!1sfr!2sma!4v1735843200000!5m2!1sfr!2sma"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -91,7 +91,7 @@ const Contact = () => {
               title="Palmador Chocolatier Location"
             />
             <a 
-              href="https://maps.app.goo.gl/F8Jsk3cfWADNc1ycA" 
+              href="https://www.google.com/maps/place/Palmador+Chocolatier/@34.2565141,-6.5820489,5488m/data=!3m1!1e3!4m6!3m5!1s0xda759978454c131:0x18b54aa81e487cf!8m2!3d34.2565452!4d-6.5818985!16s%2Fg%2F11l2kz487c?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" 
               target="_blank" 
               rel="noopener noreferrer"
               className="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg hover:bg-gray-100 transition-colors text-sm font-semibold text-chocolate"

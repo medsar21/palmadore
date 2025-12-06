@@ -2,22 +2,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 // Import des images de coupes
-import coupeEleganceS from "@/assets/Artboard 7.png";
-import coupeEleganceM from "@/assets/Artboard 8.png";
-import coupeEleganceL from "@/assets/Artboard 9.png";
-import coupeEmeraudeS from "@/assets/Artboard 10.png";
-import coupeEmeraudeM from "@/assets/Artboard 11.png";
-import coupePrestigeImg from "@/assets/Artboard 1.png";
-import coupePrestigeLImg from "@/assets/Artboard 2.png";
-import coupeTresorM from "@/assets/Artboard 5.png";
-import coupeTresorL from "@/assets/Artboard 4.png";
-import coupeAudaceS from "@/assets/coupe 4.png";
-import coupeAudaceM from "@/assets/coupe 5.png";
-import coupeAudaceL from "@/assets/coupe 6.png";
-import coupeFeddaM from "@/assets/Artboard 14.png";
-import coupeFeddaL from "@/assets/Artboard 15.png";
-import coupePiedM from "@/assets/Artboard 13.png";
-import coupePiedL from "@/assets/Artboard 12.png";
+import coupeEleganceS from "@/assets/Artboard 7.webp";
+import coupeEleganceM from "@/assets/Artboard 8.webp";
+import coupeEleganceL from "@/assets/Artboard 9.webp";
+import coupeEmeraudeS from "@/assets/Artboard 10.webp";
+import coupeEmeraudeM from "@/assets/Artboard 11.webp";
+import coupePrestigeImg from "@/assets/Artboard 1.webp";
+import coupePrestigeLImg from "@/assets/Artboard 2.webp";
+import coupeTresorM from "@/assets/Artboard 5.webp";
+import coupeTresorL from "@/assets/Artboard 4.webp";
+import coupeAudaceS from "@/assets/coupe 4.webp";
+import coupeAudaceM from "@/assets/coupe 5.webp";
+import coupeAudaceL from "@/assets/coupe 6.webp";
+import coupeFeddaM from "@/assets/Artboard 14.webp";
+import coupeFeddaL from "@/assets/Artboard 15.webp";
+import coupePiedM from "@/assets/Artboard 13.webp";
+import coupePiedL from "@/assets/Artboard 12.webp";
 
 const coupes = [
   {
