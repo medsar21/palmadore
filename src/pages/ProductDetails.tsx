@@ -22,8 +22,9 @@ import coupeTresorL from "@/assets/Artboard 20.webp";
 import coupeAudaceS from "@/assets/Artboard 1.webp";
 import coupeAudaceM from "@/assets/Artboard 2.webp";
 import coupeAudaceL from "@/assets/Artboard 3.webp";
-import boite1 from "@/assets/Artboard 6.webp";
-import boite2 from "@/assets/Artboard 3.webp";
+import boiteSmall from "@/assets/Artboard 1@2x.png";
+import boiteMedium from "@/assets/Artboard 2@2x.png";
+import boiteLarge from "@/assets/Artboard 3@2x.png";
 import oumnia from "@/assets/Artboard 4.webp";
 import oumniaL from "@/assets/Artboard 5.webp";
 import coupeOvalS from "@/assets/Artboard 18.webp";
@@ -509,30 +510,48 @@ const allProducts = [
   // Boîtes
   {
     id: 40,
-    name: "Boîte Premium",
+    name: "Boîte Small",
     description: "Boîte élégante pour vos chocolats",
-    price: "65 Dhs",
-    image: boite1,
+    price: "160 Dhs",
+    image: boiteSmall,
     category: "boites",
-    tags: ["premium", "élégante"],
+    tags: ["small", "élégante"],
+    reference: "Réf 001",
+    weight: "250g",
     fullDescription: "Boîte élégante et raffinée pour présenter vos chocolats. Design soigné qui met en valeur le contenu.",
     ingredients: "Carton premium",
-    weight: "Variable",
     allergens: "Aucun",
     rating: 4.7,
     reviews: 45
   },
   {
     id: 41,
-    name: "Boîte Cadeau",
+    name: "Boîte Medium",
     description: "Boîte cadeau raffinée",
-    price: "55 Dhs",
-    image: boite2,
+    price: "320 Dhs",
+    image: boiteMedium,
     category: "boites",
-    tags: ["cadeau", "raffinée"],
+    tags: ["medium", "raffinée"],
+    reference: "Réf 002",
+    weight: "500g",
     fullDescription: "Boîte cadeau raffinée, parfaite pour offrir. Design élégant qui fait de chaque cadeau un moment spécial.",
     ingredients: "Carton premium",
-    weight: "Variable",
+    allergens: "Aucun",
+    rating: 4.6,
+    reviews: 38
+  },
+  {
+    id: 42,
+    name: "Boîte Large",
+    description: "Grande boîte cadeau raffinée",
+    price: "480 Dhs",
+    image: boiteLarge,
+    category: "boites",
+    tags: ["large", "raffinée"],
+    reference: "Réf 003",
+    weight: "750g",
+    fullDescription: "Grande boîte cadeau raffinée, idéale pour les occasions spéciales. Design élégant et spacieux.",
+    ingredients: "Carton premium",
     allergens: "Aucun",
     rating: 4.8,
     reviews: 52

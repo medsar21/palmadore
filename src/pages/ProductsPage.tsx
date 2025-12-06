@@ -23,8 +23,9 @@ import coupeAudaceM from "@/assets/coupe 5.webp";
 import coupePrestigeImg from "@/assets/Artboard 1.webp";
 import coupePrestigeLImg from "@/assets/Artboard 2.webp";
 import coupeAudaceL from "@/assets/coupe 6.webp";
-import boite1 from "@/assets/Artboard 6.webp";
-import boite2 from "@/assets/Artboard 3.webp";
+import boiteSmall from "@/assets/Artboard 1@2x.png";
+import boiteMedium from "@/assets/Artboard 2@2x.png";
+import boiteLarge from "@/assets/Artboard 3@2x.png";
 import oumnia from "@/assets/Artboard 3.webp";
 import oumniaL from "@/assets/Artboard 6.webp";
 import coupeOvalS from "@/assets/Artboard 18.webp";
@@ -370,25 +371,40 @@ const allProducts = [
 
   // Coffrets
 
-  // Boîtes
-  {
-    id: 40,
-    name: "Boîte Premium",
-    description: "Boîte élégante pour vos chocolats",
-    price: "65 Dhs",
-    image: boite1,
-    category: "boites",
-    tags: ["premium", "élégante"],
-  },
-  {
-    id: 41,
-    name: "Boîte Cadeau",
-    description: "Boîte cadeau raffinée",
-    price: "55 Dhs",
-    image: boite2,
-    category: "boites",
-    tags: ["cadeau", "raffinée"],
-  },
+          // Boîtes
+          {
+            id: 40,
+            name: "Boîte Small",
+            description: "Boîte élégante pour vos chocolats",
+            price: "160 Dhs",
+            image: boiteSmall,
+            category: "boites",
+            tags: ["small", "élégante"],
+            reference: "Réf 001",
+            weight: "250g",
+          },
+          {
+            id: 41,
+            name: "Boîte Medium",
+            description: "Boîte cadeau raffinée",
+            price: "320 Dhs",
+            image: boiteMedium,
+            category: "boites",
+            tags: ["medium", "raffinée"],
+            reference: "Réf 002",
+            weight: "500g",
+          },
+          {
+            id: 42,
+            name: "Boîte Large",
+            description: "Grande boîte cadeau raffinée",
+            price: "480 Dhs",
+            image: boiteLarge,
+            category: "boites",
+            tags: ["large", "raffinée"],
+            reference: "Réf 003",
+            weight: "750g",
+          },
 
 ];
 

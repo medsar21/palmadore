@@ -1,23 +1,37 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import boite1 from "@/assets/Artboard 6.webp";
-import boite2 from "@/assets/Artboard 3.webp";
+import boiteSmall from "@/assets/Artboard 1@2x.png";
+import boiteMedium from "@/assets/Artboard 2@2x.png";
+import boiteLarge from "@/assets/Artboard 3@2x.png";
 
 const boites = [
   {
     id: 40,
-    name: "Boîte Premium",
-    price: "65 Dhs",
+    name: "Boîte Small",
+    price: "160 Dhs",
     description: "Boîte élégante pour vos chocolats",
-    image: boite1,
+    image: boiteSmall,
+    weight: "250g",
+    reference: "Réf 001",
   },
   {
     id: 41,
-    name: "Boîte Cadeau",
-    price: "55 Dhs",
+    name: "Boîte Medium",
+    price: "320 Dhs",
     description: "Boîte cadeau raffinée",
-    image: boite2,
+    image: boiteMedium,
+    weight: "500g",
+    reference: "Réf 002",
+  },
+  {
+    id: 42,
+    name: "Boîte Large",
+    price: "480 Dhs",
+    description: "Grande boîte cadeau raffinée",
+    image: boiteLarge,
+    weight: "750g",
+    reference: "Réf 003",
   },
 ];
 
@@ -37,11 +51,11 @@ const Boites = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
           {boites.map((boite, index) => (
             <Card
               key={boite.id}
-              className="group overflow-hidden border-none shadow-soft hover:shadow-elegant transition-all duration-300 animate-scale-in bg-background"
+              className="group overflow-hidden border-none shadow-soft hover:shadow-elegant transition-all duration-300 animate-scale-in bg-background w-full sm:w-[300px] md:w-[350px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden aspect-square bg-secondary/10">
@@ -57,6 +71,18 @@ const Boites = () => {
                 <h3 className="text-base sm:text-lg md:text-xl font-serif font-semibold text-chocolate mb-2">
                   {boite.name}
                 </h3>
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  {boite.reference && (
+                    <span className="text-xs sm:text-sm bg-orange-100 text-orange-800 px-2 py-1 rounded">
+                      {boite.reference}
+                    </span>
+                  )}
+                  {boite.weight && (
+                    <span className="text-xs sm:text-sm text-muted-foreground">
+                      {boite.weight}
+                    </span>
+                  )}
+                </div>
                 <p className="text-lg sm:text-xl md:text-2xl font-bold text-copper mb-2">
                   {boite.price}
                 </p>
