@@ -45,6 +45,22 @@ import coffretSmall from "@/assets/Artboard 16.webp";
 import coffretMedium from "@/assets/Artboard 17.webp";
 import coffretLarge from "@/assets/Artboard 18.webp";
 
+// Import des images Moroccan Edition
+import chamaSmall1 from "@/assets/Morrocan édition/Collection Chama/small.png";
+import chamaSmall2 from "@/assets/Morrocan édition/Collection Chama/small 2.png";
+import chamaBig1 from "@/assets/Morrocan édition/Collection Chama/big.png";
+import chamaBig2 from "@/assets/Morrocan édition/Collection Chama/big 2.png";
+
+import izzaSmall1 from "@/assets/Morrocan édition/Collection IZZA/smal.png";
+import izzaSmall2 from "@/assets/Morrocan édition/Collection IZZA/smal 2.png";
+import izzaBig1 from "@/assets/Morrocan édition/Collection IZZA/big.png";
+import izzaBig2 from "@/assets/Morrocan édition/Collection IZZA/big 2.png";
+
+import lamatSmall1 from "@/assets/Morrocan édition/Collection Lamat/small.png";
+import lamatSmall2 from "@/assets/Morrocan édition/Collection Lamat/small 2.png";
+import lamatBig1 from "@/assets/Morrocan édition/Collection Lamat/big .png";
+import lamatBig2 from "@/assets/Morrocan édition/Collection Lamat/big 2.png";
+
 // Définition des catégories et produits
 const categories = [
   { id: "all", name: "Tous les produits" },
@@ -404,6 +420,144 @@ const allProducts = [
             tags: ["large", "raffinée"],
             reference: "Réf 003",
             weight: "750g",
+          },
+
+          // Moroccan Edition - Collection Chama
+          {
+            id: 100,
+            name: "Chama Small - Couleur 1",
+            description: "Collection Chama - Petite taille, première couleur",
+            price: "350 Dhs",
+            image: chamaSmall1,
+            category: "special",
+            tags: ["moroccan", "chama", "small", "couleur 1"],
+            reference: "Réf MC-001",
+            weight: "300g",
+          },
+          {
+            id: 101,
+            name: "Chama Small - Couleur 2",
+            description: "Collection Chama - Petite taille, deuxième couleur",
+            price: "350 Dhs",
+            image: chamaSmall2,
+            category: "special",
+            tags: ["moroccan", "chama", "small", "couleur 2"],
+            reference: "Réf MC-002",
+            weight: "300g",
+          },
+          {
+            id: 102,
+            name: "Chama Big - Couleur 1",
+            description: "Collection Chama - Grande taille, première couleur",
+            price: "550 Dhs",
+            image: chamaBig1,
+            category: "special",
+            tags: ["moroccan", "chama", "big", "couleur 1"],
+            reference: "Réf MC-003",
+            weight: "500g",
+          },
+          {
+            id: 103,
+            name: "Chama Big - Couleur 2",
+            description: "Collection Chama - Grande taille, deuxième couleur",
+            price: "550 Dhs",
+            image: chamaBig2,
+            category: "special",
+            tags: ["moroccan", "chama", "big", "couleur 2"],
+            reference: "Réf MC-004",
+            weight: "500g",
+          },
+
+          // Moroccan Edition - Collection IZZA
+          {
+            id: 104,
+            name: "IZZA Small - Couleur 1",
+            description: "Collection IZZA - Petite taille, première couleur",
+            price: "350 Dhs",
+            image: izzaSmall1,
+            category: "special",
+            tags: ["moroccan", "izza", "small", "couleur 1"],
+            reference: "Réf MC-005",
+            weight: "300g",
+          },
+          {
+            id: 105,
+            name: "IZZA Small - Couleur 2",
+            description: "Collection IZZA - Petite taille, deuxième couleur",
+            price: "350 Dhs",
+            image: izzaSmall2,
+            category: "special",
+            tags: ["moroccan", "izza", "small", "couleur 2"],
+            reference: "Réf MC-006",
+            weight: "300g",
+          },
+          {
+            id: 106,
+            name: "IZZA Big - Couleur 1",
+            description: "Collection IZZA - Grande taille, première couleur",
+            price: "550 Dhs",
+            image: izzaBig1,
+            category: "special",
+            tags: ["moroccan", "izza", "big", "couleur 1"],
+            reference: "Réf MC-007",
+            weight: "500g",
+          },
+          {
+            id: 107,
+            name: "IZZA Big - Couleur 2",
+            description: "Collection IZZA - Grande taille, deuxième couleur",
+            price: "550 Dhs",
+            image: izzaBig2,
+            category: "special",
+            tags: ["moroccan", "izza", "big", "couleur 2"],
+            reference: "Réf MC-008",
+            weight: "500g",
+          },
+
+          // Moroccan Edition - Collection Lamat
+          {
+            id: 108,
+            name: "Lamat Small - Couleur 1",
+            description: "Collection Lamat - Petite taille, première couleur",
+            price: "350 Dhs",
+            image: lamatSmall1,
+            category: "special",
+            tags: ["moroccan", "lamat", "small", "couleur 1"],
+            reference: "Réf MC-009",
+            weight: "300g",
+          },
+          {
+            id: 109,
+            name: "Lamat Small - Couleur 2",
+            description: "Collection Lamat - Petite taille, deuxième couleur",
+            price: "350 Dhs",
+            image: lamatSmall2,
+            category: "special",
+            tags: ["moroccan", "lamat", "small", "couleur 2"],
+            reference: "Réf MC-010",
+            weight: "300g",
+          },
+          {
+            id: 110,
+            name: "Lamat Big - Couleur 1",
+            description: "Collection Lamat - Grande taille, première couleur",
+            price: "550 Dhs",
+            image: lamatBig1,
+            category: "special",
+            tags: ["moroccan", "lamat", "big", "couleur 1"],
+            reference: "Réf MC-011",
+            weight: "500g",
+          },
+          {
+            id: 111,
+            name: "Lamat Big - Couleur 2",
+            description: "Collection Lamat - Grande taille, deuxième couleur",
+            price: "550 Dhs",
+            image: lamatBig2,
+            category: "special",
+            tags: ["moroccan", "lamat", "big", "couleur 2"],
+            reference: "Réf MC-012",
+            weight: "500g",
           },
 
 ];
