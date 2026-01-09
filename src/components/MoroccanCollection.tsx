@@ -50,14 +50,14 @@ const MoroccanCollection = () => {
     <section id="moroccan-collection" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-background via-secondary/10 to-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-red-600 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-600 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-copper rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-chocolate rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 animate-slide-up">
-          <Badge className="mb-4 bg-gradient-to-r from-red-600 to-green-600 text-white px-4 py-2 text-sm sm:text-base">
+          <Badge className="mb-4 bg-gradient-copper text-white px-4 py-2 text-sm sm:text-base">
             Édition Limitée
           </Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-chocolate mb-4">
@@ -73,7 +73,7 @@ const MoroccanCollection = () => {
           {products.map((product, index) => (
             <Card
               key={product.id}
-              className="group overflow-hidden border-2 border-secondary/20 hover:border-red-500/40 transition-all duration-300 animate-scale-in bg-white shadow-soft hover:shadow-elegant cursor-pointer"
+              className="group overflow-hidden border-2 border-secondary/20 hover:border-chocolate/40 transition-all duration-300 animate-scale-in bg-white shadow-soft hover:shadow-elegant cursor-pointer"
               style={{ animationDelay: `${index * 0.05}s` }}
               onClick={() => navigate(`/product/${product.id}`)}
             >
@@ -87,7 +87,7 @@ const MoroccanCollection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-2 left-2">
-                  <Badge className="bg-gradient-to-r from-red-600 to-green-600 text-white text-xs">
+                  <Badge className="bg-gradient-copper text-white text-xs">
                     {product.collection}
                   </Badge>
                 </div>
@@ -108,7 +108,7 @@ const MoroccanCollection = () => {
                   {product.price}
                 </p>
                 <Button
-                  className="w-full bg-gradient-to-r from-red-600 to-green-600 hover:from-red-700 hover:to-green-700 text-white font-semibold text-xs sm:text-sm py-2"
+                  className="w-full bg-chocolate hover:bg-chocolate/90 text-white font-semibold text-xs sm:text-sm py-2"
                   onClick={(e) => {
                     e.stopPropagation();
                     navigate(`/product/${product.id}`);
@@ -126,7 +126,7 @@ const MoroccanCollection = () => {
           <Button
             size="lg"
             onClick={handleDiscoverClick}
-            className="bg-gradient-to-r from-red-600 via-green-600 to-red-600 hover:from-red-700 hover:via-green-700 hover:to-red-700 text-white font-semibold px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg shadow-elegant hover:scale-105 transition-all duration-300"
+            className="bg-gradient-copper text-white font-semibold px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg shadow-elegant hover:scale-105 transition-all duration-300"
           >
             Découvrir toutes les collections
           </Button>
