@@ -4,20 +4,20 @@ import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 
 // Import des images des collections
-import chamaSmall1 from "@/assets/Morrocan édition/Collection Chama/small.png";
-import chamaSmall2 from "@/assets/Morrocan édition/Collection Chama/small 2.png";
-import chamaBig1 from "@/assets/Morrocan édition/Collection Chama/big.png";
-import chamaBig2 from "@/assets/Morrocan édition/Collection Chama/big 2.png";
+import chamaSmall1 from "@/assets/Morrocan édition/Collection Chama/small.webp";
+import chamaSmall2 from "@/assets/Morrocan édition/Collection Chama/small 2.webp";
+import chamaBig1 from "@/assets/Morrocan édition/Collection Chama/big.webp";
+import chamaBig2 from "@/assets/Morrocan édition/Collection Chama/big 2.webp";
 
-import izzaSmall1 from "@/assets/Morrocan édition/Collection IZZA/smal.png";
-import izzaSmall2 from "@/assets/Morrocan édition/Collection IZZA/smal 2.png";
-import izzaBig1 from "@/assets/Morrocan édition/Collection IZZA/big.png";
-import izzaBig2 from "@/assets/Morrocan édition/Collection IZZA/big 2.png";
+import izzaSmall1 from "@/assets/Morrocan édition/Collection IZZA/smal.webp";
+import izzaSmall2 from "@/assets/Morrocan édition/Collection IZZA/smal 2.webp";
+import izzaBig1 from "@/assets/Morrocan édition/Collection IZZA/big.webp";
+import izzaBig2 from "@/assets/Morrocan édition/Collection IZZA/big 2.webp";
 
-import lamatSmall1 from "@/assets/Morrocan édition/Collection Lamat/small.png";
-import lamatSmall2 from "@/assets/Morrocan édition/Collection Lamat/small 2.png";
-import lamatBig1 from "@/assets/Morrocan édition/Collection Lamat/big .png";
-import lamatBig2 from "@/assets/Morrocan édition/Collection Lamat/big 2.png";
+import lamatSmall1 from "@/assets/Morrocan édition/Collection Lamat/small.webp";
+import lamatSmall2 from "@/assets/Morrocan édition/Collection Lamat/small 2.webp";
+import lamatBig1 from "@/assets/Morrocan édition/Collection Lamat/big .webp";
+import lamatBig2 from "@/assets/Morrocan édition/Collection Lamat/big 2.webp";
 
 const products = [
   // Collection Chama
