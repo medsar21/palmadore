@@ -68,7 +68,7 @@ const categories = [
   { id: "coupes", name: "Nos coupes" },
   { id: "coffrets", name: "Nos coffrets" },
   { id: "tablettes", name: "Tablettes" },
-  { id: "special", name: "Special edition" },
+  { id: "special", name: "Moroccan edition" },
 ];
 
 const allProducts = [
