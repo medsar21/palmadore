@@ -56,10 +56,10 @@ import izzaSmall2 from "@/assets/Morrocan édition/Collection IZZA/smal 2.webp";
 import izzaBig1 from "@/assets/Morrocan édition/Collection IZZA/big.webp";
 import izzaBig2 from "@/assets/Morrocan édition/Collection IZZA/big 2.webp";
 
-import lamatSmall1 from "@/assets/Morrocan édition/Collection Lamat/small.webp";
-import lamatSmall2 from "@/assets/Morrocan édition/Collection Lamat/small 2.webp";
-import lamatBig1 from "@/assets/Morrocan édition/Collection Lamat/big .webp";
-import lamatBig2 from "@/assets/Morrocan édition/Collection Lamat/big 2.webp";
+import lammaSmall1 from "@/assets/Morrocan édition/Collection Lamat/small.webp";
+import lammaSmall2 from "@/assets/Morrocan édition/Collection Lamat/small 2.webp";
+import lammaBig1 from "@/assets/Morrocan édition/Collection Lamat/big .webp";
+import lammaBig2 from "@/assets/Morrocan édition/Collection Lamat/big 2.webp";
 
 // Définition des catégories et produits
 const categories = [
@@ -124,7 +124,7 @@ const allProducts = [
     id: 6,
     name: "Tablette Kunafa Pistache",
     description: "Tablette artisanale kunafa à la pistache d'exception",
-    price: "À partir de 140 Dhs",
+    price: "150 Dhs",
     image: kunafaPistache,
     category: "tablettes",
     tags: ["kunafa", "pistache", "artisanale"],
@@ -403,7 +403,7 @@ const allProducts = [
             id: 41,
             name: "Boîte Medium",
             description: "Boîte cadeau raffinée",
-            price: "320 Dhs",
+    price: "320 Dhs",
             image: boiteMedium,
             category: "boites",
             tags: ["medium", "raffinée"],
@@ -514,51 +514,51 @@ const allProducts = [
             weight: "500g",
           },
 
-          // Moroccan Edition - Collection Lamat
+          // Moroccan Edition - Collection Lamma
           {
             id: 108,
-            name: "Lamat Small - Couleur 1",
-            description: "Collection Lamat - Petite taille, première couleur",
+            name: "Lamma Small - Couleur 1",
+            description: "Collection Lamma - Petite taille, première couleur",
             price: "350 Dhs",
-            image: lamatSmall1,
+            image: lammaSmall1,
             category: "special",
-            tags: ["moroccan", "lamat", "small", "couleur 1"],
+            tags: ["moroccan", "lamma", "small", "couleur 1"],
             reference: "Réf MC-009",
             weight: "300g",
           },
           {
             id: 109,
-            name: "Lamat Small - Couleur 2",
-            description: "Collection Lamat - Petite taille, deuxième couleur",
+            name: "Lamma Small - Couleur 2",
+            description: "Collection Lamma - Petite taille, deuxième couleur",
             price: "350 Dhs",
-            image: lamatSmall2,
+            image: lammaSmall2,
             category: "special",
-            tags: ["moroccan", "lamat", "small", "couleur 2"],
+            tags: ["moroccan", "lamma", "small", "couleur 2"],
             reference: "Réf MC-010",
             weight: "300g",
           },
           {
             id: 110,
-            name: "Lamat Big - Couleur 1",
-            description: "Collection Lamat - Grande taille, première couleur",
+            name: "Lamma Big - Couleur 1",
+            description: "Collection Lamma - Grande taille, première couleur",
             price: "550 Dhs",
-            image: lamatBig1,
+            image: lammaBig1,
             category: "special",
-            tags: ["moroccan", "lamat", "big", "couleur 1"],
+            tags: ["moroccan", "lamma", "big", "couleur 1"],
             reference: "Réf MC-011",
             weight: "500g",
           },
           {
             id: 111,
-            name: "Lamat Big - Couleur 2",
-            description: "Collection Lamat - Grande taille, deuxième couleur",
+            name: "Lamma Big - Couleur 2",
+            description: "Collection Lamma - Grande taille, deuxième couleur",
             price: "550 Dhs",
-            image: lamatBig2,
+            image: lammaBig2,
             category: "special",
-            tags: ["moroccan", "lamat", "big", "couleur 2"],
+            tags: ["moroccan", "lamma", "big", "couleur 2"],
             reference: "Réf MC-012",
             weight: "500g",
-          },
+  },
 
 ];
 

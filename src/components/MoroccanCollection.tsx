@@ -14,10 +14,10 @@ import izzaSmall2 from "@/assets/Morrocan édition/Collection IZZA/smal 2.webp";
 import izzaBig1 from "@/assets/Morrocan édition/Collection IZZA/big.webp";
 import izzaBig2 from "@/assets/Morrocan édition/Collection IZZA/big 2.webp";
 
-import lamatSmall1 from "@/assets/Morrocan édition/Collection Lamat/small.webp";
-import lamatSmall2 from "@/assets/Morrocan édition/Collection Lamat/small 2.webp";
-import lamatBig1 from "@/assets/Morrocan édition/Collection Lamat/big .webp";
-import lamatBig2 from "@/assets/Morrocan édition/Collection Lamat/big 2.webp";
+import lammaSmall1 from "@/assets/Morrocan édition/Collection Lamat/small.webp";
+import lammaSmall2 from "@/assets/Morrocan édition/Collection Lamat/small 2.webp";
+import lammaBig1 from "@/assets/Morrocan édition/Collection Lamat/big .webp";
+import lammaBig2 from "@/assets/Morrocan édition/Collection Lamat/big 2.webp";
 
 const products = [
   // Collection Chama
@@ -32,11 +32,11 @@ const products = [
   { id: 106, name: "IZZA Big - Couleur 1", image: izzaBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-007", collection: "IZZA" },
   { id: 107, name: "IZZA Big - Couleur 2", image: izzaBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-008", collection: "IZZA" },
   
-  // Collection Lamat
-  { id: 108, name: "Lamat Small - Couleur 1", image: lamatSmall1, price: "350 Dhs", weight: "300g", reference: "Réf MC-009", collection: "Lamat" },
-  { id: 109, name: "Lamat Small - Couleur 2", image: lamatSmall2, price: "350 Dhs", weight: "300g", reference: "Réf MC-010", collection: "Lamat" },
-  { id: 110, name: "Lamat Big - Couleur 1", image: lamatBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-011", collection: "Lamat" },
-  { id: 111, name: "Lamat Big - Couleur 2", image: lamatBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-012", collection: "Lamat" },
+  // Collection Lamma
+  { id: 108, name: "Lamma Small - Couleur 1", image: lammaSmall1, price: "350 Dhs", weight: "300g", reference: "Réf MC-009", collection: "Lamma" },
+  { id: 109, name: "Lamma Small - Couleur 2", image: lammaSmall2, price: "350 Dhs", weight: "300g", reference: "Réf MC-010", collection: "Lamma" },
+  { id: 110, name: "Lamma Big - Couleur 1", image: lammaBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-011", collection: "Lamma" },
+  { id: 111, name: "Lamma Big - Couleur 2", image: lammaBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-012", collection: "Lamma" },
 ];
 
 const MoroccanCollection = () => {
