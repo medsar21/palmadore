@@ -32,6 +32,7 @@ import coupeOvalS from "@/assets/Artboard 18.webp";
 import coupeOvalM from "@/assets/Artboard 17.webp";
 import serviteur from "@/assets/Artboard 16.webp";
 import kunafaPistache from "@/assets/kunafa.webp";
+import kinafaSghira from "@/assets/Morrocan édition/kinafa sghira.webp";
 import coupePiedL from "@/assets/Artboard 12.webp";
 import coupePiedM from "@/assets/Artboard 13.webp";
 import coupePrestigeGoldM from "@/assets/Artboard 19.webp";
@@ -128,6 +129,15 @@ const allProducts = [
     image: kunafaPistache,
     category: "tablettes",
     tags: ["kunafa", "pistache", "artisanale"],
+  },
+  {
+    id: 7,
+    name: "Kinafa Sghira",
+    description: "Petite tablette kunafa artisanale",
+    price: "80 Dhs",
+    image: kinafaSghira,
+    category: "tablettes",
+    tags: ["kunafa", "petite", "artisanale"],
   },
 
   // Coupes

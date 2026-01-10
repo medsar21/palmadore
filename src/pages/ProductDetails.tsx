@@ -40,6 +40,7 @@ import coffretSmall from "@/assets/Artboard 16.webp";
 import coffretMedium from "@/assets/Artboard 17.webp";
 import coffretLarge from "@/assets/Artboard 18.webp";
 import kunafaPistache from "@/assets/kunafa.webp";
+import kinafaSghira from "@/assets/Morrocan édition/kinafa sghira.webp";
 import coupeRayeeS from "@/assets/coupe.webp";
 import coupeRayeeM from "@/assets/coupe 2.webp";
 import coupeRayeeL from "@/assets/coupe 3.webp";
@@ -123,6 +124,21 @@ const allProducts = [
     allergens: "Contient des pistaches et peut contenir des traces de lait",
     rating: 4.9,
     reviews: 92
+  },
+  {
+    id: 7,
+    name: "Kinafa Sghira",
+    description: "Petite tablette kunafa artisanale",
+    price: "80 Dhs",
+    image: kinafaSghira,
+    category: "tablettes",
+    tags: ["kunafa", "petite", "artisanale"],
+    fullDescription: "Notre petite tablette kunafa est une version compacte de notre création artisanale. Parfaite pour une dégustation individuelle, elle conserve toute la qualité et le goût authentique du kunafa traditionnel.",
+    ingredients: "Kunafa, chocolat, sucre",
+    weight: "50g",
+    allergens: "Peut contenir des traces de lait et de fruits à coque",
+    rating: 4.8,
+    reviews: 45
   },
   // Coupes
   {
