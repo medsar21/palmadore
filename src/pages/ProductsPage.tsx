@@ -132,7 +132,7 @@ const allProducts = [
   },
   {
     id: 7,
-    name: "Kinafa Sghira",
+    name: "Mini Tablette Kunafa Pistache",
     description: "Petite tablette kunafa artisanale",
     price: "80 Dhs",
     image: kinafaSghira,
