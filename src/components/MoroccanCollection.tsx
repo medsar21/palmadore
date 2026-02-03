@@ -32,11 +32,11 @@ const products = [
   { id: 106, name: "IZZA Big - Couleur 1", image: izzaBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-007", collection: "IZZA" },
   { id: 107, name: "IZZA Big - Couleur 2", image: izzaBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-008", collection: "IZZA" },
   
-  // Collection Lamma
-  { id: 108, name: "Lamma Small - Couleur 1", image: lammaSmall1, price: "350 Dhs", weight: "300g", reference: "Réf MC-009", collection: "Lamma" },
-  { id: 109, name: "Lamma Small - Couleur 2", image: lammaSmall2, price: "350 Dhs", weight: "300g", reference: "Réf MC-010", collection: "Lamma" },
-  { id: 110, name: "Lamma Big - Couleur 1", image: lammaBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-011", collection: "Lamma" },
-  { id: 111, name: "Lamma Big - Couleur 2", image: lammaBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-012", collection: "Lamma" },
+  // Collection Lammat
+  { id: 108, name: "Lammat Small - Couleur 1", image: lammaSmall1, price: "350 Dhs", weight: "300g", reference: "Réf MC-009", collection: "Lammat" },
+  { id: 109, name: "Lammat Small - Couleur 2", image: lammaSmall2, price: "350 Dhs", weight: "300g", reference: "Réf MC-010", collection: "Lammat" },
+  { id: 110, name: "Lammat Big - Couleur 1", image: lammaBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-011", collection: "Lammat" },
+  { id: 111, name: "Lammat Big - Couleur 2", image: lammaBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-012", collection: "Lammat" },
 ];
 
 const MoroccanCollection = () => {
@@ -57,9 +57,6 @@ const MoroccanCollection = () => {
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 animate-slide-up">
-          <Badge className="mb-4 bg-gradient-copper text-white px-4 py-2 text-sm sm:text-base">
-            Édition Limitée
-          </Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-chocolate mb-4">
             Moroccan Edition
           </h2>

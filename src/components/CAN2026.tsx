@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 import canImage from "@/assets/can.webp";
 
@@ -22,9 +21,6 @@ const CAN2026 = () => {
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 animate-slide-up">
-          <Badge className="mb-4 bg-gradient-to-r from-red-600 to-green-600 text-white px-4 py-2 text-sm sm:text-base">
-            Édition Spéciale
-          </Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-chocolate mb-4">
             CAN 2026 Maroc
           </h2>
