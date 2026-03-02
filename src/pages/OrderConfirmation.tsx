@@ -14,7 +14,7 @@ const OrderConfirmation = () => {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-chocolate mb-4">Commande non trouvée</h1>
+          <h1 className="text-2xl font-bold text-chocolate mb-4">Commande non trouvÃƒÂ©e</h1>
           <Button onClick={() => navigate('/products')}>
             Retour aux produits
           </Button>
@@ -25,7 +25,7 @@ const OrderConfirmation = () => {
 
   const { product, quantity, isPersonalized, personalizationText, orderForm } = orderData;
 
-  // Générer un numéro de commande fictif
+  // GÃƒÂ©nÃƒÂ©rer un numÃƒÂ©ro de commande fictif
   const orderNumber = orderData.orderNumber || `CMD-${Date.now().toString().slice(-6)}`;
 
   return (
@@ -37,19 +37,19 @@ const OrderConfirmation = () => {
             <CheckCircle className="h-10 w-10 text-green-600" />
           </div>
           <h1 className="text-4xl font-serif font-bold text-chocolate mb-4">
-            Commande Confirmée !
+            Commande ConfirmÃƒÂ©e !
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Votre commande a été prise en charge avec succès. Nous vous contacterons dans les plus brefs délais.
+            Votre commande a ÃƒÂ©tÃƒÂ© prise en charge avec succÃƒÂ¨s. Nous vous contacterons dans les plus brefs dÃƒÂ©lais.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Détails de la commande */}
+          {/* DÃƒÂ©tails de la commande */}
           <Card className="lg:col-span-2">
             <CardContent className="p-8">
               <h2 className="text-2xl font-serif font-bold text-chocolate mb-6">
-                Détails de votre commande
+                DÃƒÂ©tails de votre commande
               </h2>
 
               <div className="space-y-6">
@@ -69,7 +69,7 @@ const OrderConfirmation = () => {
                       <Badge variant="secondary" className="bg-chocolate/10 text-chocolate">
                         {product.category}
                       </Badge>
-                      <span className="text-sm text-muted-foreground">Quantité: {quantity}</span>
+                      <span className="text-sm text-muted-foreground">QuantitÃƒÂ©: {quantity}</span>
                     </div>
                     <div className="text-lg font-bold text-copper">{product.price}</div>
                   </div>
@@ -112,15 +112,15 @@ const OrderConfirmation = () => {
             </CardContent>
           </Card>
 
-          {/* Résumé */}}
+          {/* Resume */}
           <div className="space-y-6">
-            {/* Résumé de commande */}
+            {/* RÃƒÂ©sumÃƒÂ© de commande */}
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-chocolate mb-4">Résumé</h3>
+                <h3 className="font-semibold text-chocolate mb-4">RÃƒÂ©sumÃƒÂ©</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Numéro de commande</span>
+                    <span className="text-muted-foreground">NumÃƒÂ©ro de commande</span>
                     <span className="font-mono text-sm font-semibold">{orderNumber}</span>
                   </div>
                   <div className="flex justify-between">
@@ -128,7 +128,7 @@ const OrderConfirmation = () => {
                     <span className="font-semibold">{product.name}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Quantité</span>
+                    <span className="text-muted-foreground">QuantitÃƒÂ©</span>
                     <span className="font-semibold">{quantity}</span>
                   </div>
                   <div className="flex justify-between">
@@ -151,7 +151,7 @@ const OrderConfirmation = () => {
               </CardContent>
             </Card>
 
-            {/* Informations de contact */}}
+            {/* Informations de contact */}
             <Card className="bg-chocolate/5 border-chocolate/20">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-chocolate mb-4">Besoin d'aide ?</h3>
@@ -189,7 +189,7 @@ const OrderConfirmation = () => {
             className="flex items-center gap-2 bg-chocolate hover:bg-chocolate/90 text-white"
           >
             <Home className="h-4 w-4" />
-            Retour à l'accueil
+            Retour ÃƒÂ  l'accueil
           </Button>
         </div>
       </div>
