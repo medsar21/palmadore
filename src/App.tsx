@@ -20,6 +20,7 @@ import ServiceFiancaillesPage from "./pages/ServiceFiancaillesPage";
 import ServiceNaissancePage from "./pages/ServiceNaissancePage";
 import ServiceAnniversairePage from "./pages/ServiceAnniversairePage";
 import NotFound from "./pages/NotFound";
+import { APP_ROUTES } from "@/lib/app-routes";
 
 const queryClient = new QueryClient();
 
@@ -48,19 +49,19 @@ const App = () => {
           <ScrollToTop />
           <Routes>
             <Route element={<Layout />}>
-              <Route path="/" element={<Index />} />
-              <Route path="/products" element={<ProductsPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/login" element={<Login />} />
+              <Route path={APP_ROUTES.HOME} element={<Index />} />
+              <Route path={APP_ROUTES.PRODUCTS} element={<ProductsPage />} />
+              <Route path={APP_ROUTES.SERVICES} element={<ServicesPage />} />
+              <Route path={APP_ROUTES.ABOUT} element={<AboutPage />} />
+              <Route path={APP_ROUTES.CONTACT} element={<ContactPage />} />
+              <Route path={APP_ROUTES.LOGIN} element={<Login />} />
             </Route>
-            <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/order-confirmation" element={<OrderConfirmation />} />
-            <Route path="/services/mariage" element={<ServiceMarriagePage />} />
-            <Route path="/services/fiancailles" element={<ServiceFiancaillesPage />} />
-            <Route path="/services/naissance" element={<ServiceNaissancePage />} />
-            <Route path="/services/anniversaire" element={<ServiceAnniversairePage />} />
+            <Route path={APP_ROUTES.PRODUCT_DETAILS} element={<ProductDetails />} />
+            <Route path={APP_ROUTES.ORDER_CONFIRMATION} element={<OrderConfirmation />} />
+            <Route path={APP_ROUTES.SERVICE_MARIAGE} element={<ServiceMarriagePage />} />
+            <Route path={APP_ROUTES.SERVICE_FIANCAILLES} element={<ServiceFiancaillesPage />} />
+            <Route path={APP_ROUTES.SERVICE_NAISSANCE} element={<ServiceNaissancePage />} />
+            <Route path={APP_ROUTES.SERVICE_ANNIVERSAIRE} element={<ServiceAnniversairePage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

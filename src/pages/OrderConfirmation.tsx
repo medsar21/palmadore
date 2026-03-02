@@ -1,8 +1,8 @@
-Ôªøimport { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, ArrowLeft, Home, Package, Clock, MapPin, Phone } from "lucide-react";
+import { CheckCircle, ArrowLeft, Home, Clock, MapPin, Phone } from "lucide-react";
 
 const OrderConfirmation = () => {
   const location = useLocation();
@@ -14,7 +14,7 @@ const OrderConfirmation = () => {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-chocolate mb-4">Commande non trouv√©e</h1>
+          <h1 className="text-2xl font-bold text-chocolate mb-4">Commande non trouvÈe</h1>
           <Button onClick={() => navigate('/products')}>
             Retour aux produits
           </Button>
@@ -25,7 +25,7 @@ const OrderConfirmation = () => {
 
   const { product, quantity, isPersonalized, personalizationText, orderForm } = orderData;
 
-  // G√©n√©rer un num√©ro de commande fictif
+  // GÈnÈrer un numÈro de commande fictif
   const orderNumber = orderData.orderNumber || `CMD-${Date.now().toString().slice(-6)}`;
 
   return (
@@ -37,19 +37,19 @@ const OrderConfirmation = () => {
             <CheckCircle className="h-10 w-10 text-green-600" />
           </div>
           <h1 className="text-4xl font-serif font-bold text-chocolate mb-4">
-            Commande Confirm√©e !
+            Commande ConfirmÈe !
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Votre commande a √©t√© prise en charge avec succ√®s. Nous vous contacterons dans les plus brefs d√©lais.
+            Votre commande a ÈtÈ prise en charge avec succËs. Nous vous contacterons dans les plus brefs dÈlais.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* D√©tails de la commande */}
+          {/* DÈtails de la commande */}
           <Card className="lg:col-span-2">
             <CardContent className="p-8">
               <h2 className="text-2xl font-serif font-bold text-chocolate mb-6">
-                D√©tails de votre commande
+                DÈtails de votre commande
               </h2>
 
               <div className="space-y-6">
@@ -69,7 +69,7 @@ const OrderConfirmation = () => {
                       <Badge variant="secondary" className="bg-chocolate/10 text-chocolate">
                         {product.category}
                       </Badge>
-                      <span className="text-sm text-muted-foreground">Quantit√©: {quantity}</span>
+                      <span className="text-sm text-muted-foreground">QuantitÈ: {quantity}</span>
                     </div>
                     <div className="text-lg font-bold text-copper">{product.price}</div>
                   </div>
@@ -112,15 +112,15 @@ const OrderConfirmation = () => {
             </CardContent>
           </Card>
 
-          {/* R√©sum√© et prochaines √©tapes */}
+          {/* RÈsumÈ */}}
           <div className="space-y-6">
-            {/* R√©sum√© de commande */}
+            {/* RÈsumÈ de commande */}
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-chocolate mb-4">R√©sum√©</h3>
+                <h3 className="font-semibold text-chocolate mb-4">RÈsumÈ</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Num√©ro de commande</span>
+                    <span className="text-muted-foreground">NumÈro de commande</span>
                     <span className="font-mono text-sm font-semibold">{orderNumber}</span>
                   </div>
                   <div className="flex justify-between">
@@ -128,7 +128,7 @@ const OrderConfirmation = () => {
                     <span className="font-semibold">{product.name}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Quantit√©</span>
+                    <span className="text-muted-foreground">QuantitÈ</span>
                     <span className="font-semibold">{quantity}</span>
                   </div>
                   <div className="flex justify-between">
@@ -151,45 +151,7 @@ const OrderConfirmation = () => {
               </CardContent>
             </Card>
 
-            {/* Prochaines √©tapes */}
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="font-semibold text-chocolate mb-4">Prochaines √©tapes</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-chocolate text-white text-xs flex items-center justify-center font-bold">
-                      1
-                    </div>
-                    <div>
-                      <p className="font-medium text-sm">Confirmation</p>
-                      <p className="text-xs text-muted-foreground">Votre commande est confirm√©e</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-secondary/20 text-muted-foreground text-xs flex items-center justify-center font-bold">
-                      2
-                    </div>
-                    <div>
-                      <p className="font-medium text-sm">Pr√©paration</p>
-                      <p className="text-xs text-muted-foreground">Nous pr√©parons votre commande</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-secondary/20 text-muted-foreground text-xs flex items-center justify-center font-bold">
-                      3
-                    </div>
-                    <div>
-                      <p className="font-medium text-sm">Livraison</p>
-                      <p className="text-xs text-muted-foreground">Nous vous contacterons pour la livraison</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Informations de contact */}
+            {/* Informations de contact */}}
             <Card className="bg-chocolate/5 border-chocolate/20">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-chocolate mb-4">Besoin d'aide ?</h3>
@@ -227,7 +189,7 @@ const OrderConfirmation = () => {
             className="flex items-center gap-2 bg-chocolate hover:bg-chocolate/90 text-white"
           >
             <Home className="h-4 w-4" />
-            Retour √† l'accueil
+            Retour ‡ l'accueil
           </Button>
         </div>
       </div>
@@ -236,6 +198,7 @@ const OrderConfirmation = () => {
 };
 
 export default OrderConfirmation;
+
 
 
 

@@ -1,3 +1,5 @@
+import { PRODUCT_ROUTE_PATTERNS } from "@/lib/app-routes";
+
 export type OrderSheetPayload = {
   timestamp: string;
   orderNumber: string;
@@ -56,40 +58,116 @@ const getBrowserOrigin = (): string => {
   return window.location.origin;
 };
 
-const withOrigin = (value: string): string => {
+const toAbsoluteUrl = (value: string): string => {
   const raw = value.trim();
   if (!raw) return "";
 
   const origin = getBrowserOrigin();
-  if (!origin) return raw;
 
   try {
-    return new URL(raw, origin).toString();
+    if (origin) {
+      return new URL(raw, origin).toString();
+    }
+
+    return new URL(raw).toString();
   } catch {
-    return raw;
+    return "";
   }
 };
 
-export const getProductUrl = (product: ProductUrlSource | null | undefined): string => {
-  if (!product) return "";
+const buildPathFromPattern = (pattern: string, product: ProductUrlSource): string => {
+  let path = pattern;
 
-  const directUrl = String(product.url || "").trim();
-  if (directUrl) {
-    return withOrigin(directUrl);
+  if (path.includes(":slug")) {
+    const slug = String(product.slug ?? "").trim();
+    if (!slug) return "";
+    path = path.replace(":slug", encodeURIComponent(slug));
   }
+
+  if (path.includes(":id")) {
+    const id = String(product.id ?? "").trim();
+    if (!id) return "";
+    path = path.replace(":id", encodeURIComponent(id));
+  }
+
+  return path;
+};
+
+const getSafeExistingUrl = (): string => {
+  if (typeof window === "undefined") return "";
 
   const origin = getBrowserOrigin();
-  const slug = String(product.slug ?? "").trim();
-  if (slug) {
-    return origin ? `${origin}/product/${encodeURIComponent(slug)}` : `/product/${encodeURIComponent(slug)}`;
-  }
+  if (origin) return origin;
 
-  const id = String(product.id ?? "").trim();
-  if (id) {
-    return origin ? `${origin}/product/${encodeURIComponent(id)}` : `/product/${encodeURIComponent(id)}`;
-  }
+  const href = String(window.location.href || "").trim();
+  if (href) return href;
 
   return "";
+};
+
+const isReachableStatus = (status: number): boolean => {
+  return status >= 200 && status < 400;
+};
+
+const canOpenUrl = async (url: string): Promise<boolean> => {
+  try {
+    const headResponse = await fetch(url, {
+      method: "HEAD",
+      redirect: "follow",
+      cache: "no-store",
+    });
+
+    if (isReachableStatus(headResponse.status)) {
+      return true;
+    }
+
+    // Some hosts do not allow HEAD for SPA routes.
+    if (headResponse.status === 405 || headResponse.status === 501) {
+      const getResponse = await fetch(url, {
+        method: "GET",
+        redirect: "follow",
+        cache: "no-store",
+      });
+
+      return isReachableStatus(getResponse.status);
+    }
+
+    return false;
+  } catch {
+    return false;
+  }
+};
+
+const buildRouteCandidates = (product: ProductUrlSource): string[] => {
+  const origin = getBrowserOrigin();
+  if (!origin) return [];
+
+  const urls = PRODUCT_ROUTE_PATTERNS
+    .map((pattern) => buildPathFromPattern(pattern, product))
+    .filter((path) => path.length > 0)
+    .map((path) => toAbsoluteUrl(path))
+    .filter((url) => url.length > 0);
+
+  return Array.from(new Set(urls));
+};
+
+export const buildProductUrl = async (product: ProductUrlSource | null | undefined): Promise<string> => {
+  if (!product) return "";
+
+  const directUrl = toAbsoluteUrl(String(product.url || ""));
+  if (directUrl) {
+    return directUrl;
+  }
+
+  const routeCandidates = buildRouteCandidates(product);
+  for (const candidateUrl of routeCandidates) {
+    const reachable = await canOpenUrl(candidateUrl);
+    if (reachable) {
+      return candidateUrl;
+    }
+  }
+
+  return getSafeExistingUrl();
 };
 
 const getProductName = (value: string | null | undefined): string => {

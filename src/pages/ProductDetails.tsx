@@ -9,7 +9,7 @@ import { ArrowLeft, Heart, Share2, Star, ShoppingCart } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import { productsCatalog as allProducts } from "@/data/products";
-import { getProductUrl, submitOrderToGoogleSheet } from "@/lib/order-sheet";
+import { buildProductUrl, submitOrderToGoogleSheet } from "@/lib/order-sheet";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -59,7 +59,7 @@ const ProductDetails = () => {
   const handleOrderSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const productUrl = getProductUrl(product);
+    const productUrl = await buildProductUrl(product);
     if (!productUrl) {
       toast({
         title: "Echec d'envoi",
