@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
+import { submitContactToGoogleSheet } from "@/lib/order-sheet";
 import { Phone, MapPin, Clock, Instagram, MessageCircle, Send, CheckCircle2, User, Mail } from "lucide-react";
 
 const ContactPage = () => {
@@ -40,17 +41,29 @@ const ContactPage = () => {
     }
 
     setIsSubmitting(true);
-    
-    // Simuler l'envoi du formulaire
-    setTimeout(() => {
+
+    try {
+      await submitContactToGoogleSheet({
+        fullName: formData.fullName,
+        phone: formData.phone,
+        message: formData.message,
+      });
+
       setIsSubmitting(false);
       setIsSubmitted(true);
-      
+
       toast({
         title: "Message envoyé avec succès !",
         description: "Nous vous contacterons dans les 24 heures.",
       });
-    }, 2000);
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Echec d'envoi",
+        description: error instanceof Error ? error.message : "Impossible d'envoyer le message.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleNewMessage = () => {
@@ -125,7 +138,7 @@ const ContactPage = () => {
             Contactez-Nous
           </h1>
           <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto">
-            Nous sommes à votre écoute pour réaliser vos projets chocolatés. 
+            Nous sommes à votre écoute pour réaliser vos projets chocolatés.
             Remplissez le formulaire ci-dessous et nous vous contacterons dans les 24 heures.
           </p>
         </div>
@@ -268,3 +281,4 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+

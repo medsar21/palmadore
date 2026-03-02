@@ -71,3 +71,19 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Google Sheets order storage
+
+Order data is sent from the product order form to a webhook URL defined in:
+
+`NEXT_PUBLIC_GOOGLE_SHEETS_URL`
+
+Recommended setup:
+
+1. Open your target Google Sheet.
+2. Go to `Extensions > Apps Script`.
+3. Use `scripts/google-sheets-webhook.gs` and keep:
+`SHEET_ID = "1z9j4qIZCEo8Oc8E_iuFb6oIi6t3ojiC_uDwK0tTw3iA"`
+and `SHEET_NAME = "palmador commande"`.
+4. Deploy as a web app (`Anyone with the link`).
+5. Paste the deployment URL into `.env` as `NEXT_PUBLIC_GOOGLE_SHEETS_URL`.

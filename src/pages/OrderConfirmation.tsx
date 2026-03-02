@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+﻿import { useLocation, useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +26,7 @@ const OrderConfirmation = () => {
   const { product, quantity, isPersonalized, personalizationText, orderForm } = orderData;
 
   // Générer un numéro de commande fictif
-  const orderNumber = `CMD-${Date.now().toString().slice(-6)}`;
+  const orderNumber = orderData.orderNumber || `CMD-${Date.now().toString().slice(-6)}`;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-secondary/10 to-background">
@@ -236,6 +236,7 @@ const OrderConfirmation = () => {
 };
 
 export default OrderConfirmation;
+
 
 
 
