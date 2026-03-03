@@ -1,39 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import boiteSmall from "@/assets/Artboard 1@2x.png";
-import boiteMedium from "@/assets/Artboard 2@2x.png";
-import boiteLarge from "@/assets/Artboard 3@2x.png";
+import { productsCatalog as allProducts } from "@/data/products";
 
-const boites = [
-  {
-    id: 40,
-    name: "Boîte Small",
-    price: "160 Dhs",
-    description: "Boîte élégante pour vos chocolats",
-    image: boiteSmall,
-    weight: "250g",
-    reference: "Réf 001",
-  },
-  {
-    id: 41,
-    name: "Boîte Medium",
-    price: "320 Dhs",
-    description: "Boîte cadeau raffinée",
-    image: boiteMedium,
-    weight: "500g",
-    reference: "Réf 002",
-  },
-  {
-    id: 42,
-    name: "Boîte Large",
-    price: "480 Dhs",
-    description: "Grande boîte cadeau raffinée",
-    image: boiteLarge,
-    weight: "750g",
-    reference: "Réf 003",
-  },
-];
+const boites = allProducts.filter((product) => product.category === "boites");
 
 const Boites = () => {
   const navigate = useNavigate();

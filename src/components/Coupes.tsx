@@ -1,29 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import oumnia from "@/assets/Artboard 3.webp";
-import oumniaL from "@/assets/Artboard 6.webp";
+import { productsCatalog as allProducts } from "@/data/products";
 
-const coffrets = [
-  {
-    id: 25,
-    name: "Oumnia",
-    price: "550 Dhs",
-    description: "Coffret cadeau élégant rectangulaire en velours crème avec intérieur doré et couvercle orné d'un panneau rectangulaire doré aux motifs complexes.",
-    image: oumnia,
-    reference: "Réf 047",
-    weight: "300g",
-  },
-  {
-    id: 26,
-    name: "Oumnia L",
-    price: "950 Dhs",
-    description: "Grand coffret cadeau élégant rectangulaire en velours crème avec intérieur doré et couvercle orné d'un panneau rectangulaire doré aux motifs complexes.",
-    image: oumniaL,
-    reference: "Réf 048",
-    weight: "700g",
-  },
-];
+const coffrets = allProducts.filter((product) => product.category === "coffrets");
 
 const Coupes = () => {
   const navigate = useNavigate();

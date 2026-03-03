@@ -2,42 +2,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
+import { productsCatalog as allProducts } from "@/data/products";
 
-// Import des images des collections
-import chamaSmall1 from "@/assets/Morrocan édition/Collection Chama/small.webp";
-import chamaSmall2 from "@/assets/Morrocan édition/Collection Chama/small 2.webp";
-import chamaBig1 from "@/assets/Morrocan édition/Collection Chama/big.webp";
-import chamaBig2 from "@/assets/Morrocan édition/Collection Chama/big 2.webp";
+const products = allProducts.filter((product) => product.category === "special");
 
-import izzaSmall1 from "@/assets/Morrocan édition/Collection IZZA/smal.webp";
-import izzaSmall2 from "@/assets/Morrocan édition/Collection IZZA/smal 2.webp";
-import izzaBig1 from "@/assets/Morrocan édition/Collection IZZA/big.webp";
-import izzaBig2 from "@/assets/Morrocan édition/Collection IZZA/big 2.webp";
-
-import lammaSmall1 from "@/assets/Morrocan édition/Collection Lamat/small.webp";
-import lammaSmall2 from "@/assets/Morrocan édition/Collection Lamat/small 2.webp";
-import lammaBig1 from "@/assets/Morrocan édition/Collection Lamat/big .webp";
-import lammaBig2 from "@/assets/Morrocan édition/Collection Lamat/big 2.webp";
-
-const products = [
-  // Collection Chama
-  { id: 100, name: "Chama Small - Couleur 1", image: chamaSmall1, price: "350 Dhs", weight: "300g", reference: "Réf MC-001", collection: "Chama" },
-  { id: 101, name: "Chama Small - Couleur 2", image: chamaSmall2, price: "350 Dhs", weight: "300g", reference: "Réf MC-002", collection: "Chama" },
-  { id: 102, name: "Chama Big - Couleur 1", image: chamaBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-003", collection: "Chama" },
-  { id: 103, name: "Chama Big - Couleur 2", image: chamaBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-004", collection: "Chama" },
-  
-  // Collection IZZA
-  { id: 104, name: "IZZA Small - Couleur 1", image: izzaSmall1, price: "350 Dhs", weight: "300g", reference: "Réf MC-005", collection: "IZZA" },
-  { id: 105, name: "IZZA Small - Couleur 2", image: izzaSmall2, price: "350 Dhs", weight: "300g", reference: "Réf MC-006", collection: "IZZA" },
-  { id: 106, name: "IZZA Big - Couleur 1", image: izzaBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-007", collection: "IZZA" },
-  { id: 107, name: "IZZA Big - Couleur 2", image: izzaBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-008", collection: "IZZA" },
-  
-  // Collection Lammat
-  { id: 108, name: "Lammat Small - Couleur 1", image: lammaSmall1, price: "350 Dhs", weight: "300g", reference: "Réf MC-009", collection: "Lammat" },
-  { id: 109, name: "Lammat Small - Couleur 2", image: lammaSmall2, price: "350 Dhs", weight: "300g", reference: "Réf MC-010", collection: "Lammat" },
-  { id: 110, name: "Lammat Big - Couleur 1", image: lammaBig1, price: "550 Dhs", weight: "500g", reference: "Réf MC-011", collection: "Lammat" },
-  { id: 111, name: "Lammat Big - Couleur 2", image: lammaBig2, price: "550 Dhs", weight: "500g", reference: "Réf MC-012", collection: "Lammat" },
-];
+const getCollectionName = (productName: string): string => {
+  return productName.split(" ")[0] || "Collection";
+};
 
 const MoroccanCollection = () => {
   const navigate = useNavigate();
@@ -85,7 +56,7 @@ const MoroccanCollection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-2 left-2">
                   <Badge className="bg-gradient-copper text-white text-xs">
-                    {product.collection}
+                    {getCollectionName(product.name)}
                   </Badge>
                 </div>
               </div>
@@ -134,4 +105,3 @@ const MoroccanCollection = () => {
 };
 
 export default MoroccanCollection;
-

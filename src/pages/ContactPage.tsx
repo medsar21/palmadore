@@ -268,7 +268,7 @@ const ContactPage = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Horaires</h3>
                 <div className="text-white/80 space-y-1">
-                  <p className="text-lg">10h - 20h30</p>
+                  <p className="text-lg">10:00 - 20:30</p>
                 </div>
               </CardContent>
             </Card>

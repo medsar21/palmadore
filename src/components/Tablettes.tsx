@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import kunafaPistache from "@/assets/kunafa.webp";
+import { productsCatalog as allProducts } from "@/data/products";
+
+const tablettes = allProducts.filter((product) => product.category === "tablettes");
 
 const Tablettes = () => {
   const navigate = useNavigate();
@@ -18,26 +20,29 @@ const Tablettes = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 max-w-md mx-auto">
-          <div
-            className="group animate-scale-in cursor-pointer"
-            style={{ animationDelay: '0.1s' }}
-            onClick={handleDiscoverClick}
-          >
-            <div className="relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300">
-              <img
-                src={kunafaPistache}
-                alt="Tablette Kunafa Pistache"
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-chocolate/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 max-w-4xl mx-auto">
+          {tablettes.map((tablette, index) => (
+            <div
+              key={tablette.id}
+              className="group animate-scale-in cursor-pointer"
+              style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+              onClick={() => navigate(`/product/${tablette.id}`)}
+            >
+              <div className="relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300">
+                <img
+                  src={tablette.image}
+                  alt={tablette.name}
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-chocolate/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              <h3 className="text-center mt-2 sm:mt-3 font-serif text-sm sm:text-base md:text-lg text-chocolate font-semibold">
+                {tablette.name}
+              </h3>
             </div>
-            <h3 className="text-center mt-2 sm:mt-3 font-serif text-sm sm:text-base md:text-lg text-chocolate font-semibold">
-              Kunafa Pistache
-            </h3>
-          </div>
+          ))}
         </div>
 
         <div className="text-center">

@@ -55,7 +55,7 @@ const Contact = () => {
               </div>
               <h3 className="font-semibold mb-2">Horaires</h3>
               <p className="text-white/80 text-sm">
-                10h - 20h30
+                10:00 - 20:30
               </p>
             </CardContent>
           </Card>

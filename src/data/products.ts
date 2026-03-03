@@ -1,7 +1,4 @@
 // Catalogue produit centralise pour eviter les divergences entre cartes et details.
-import product1 from "@/assets/Artboard 5.webp";
-import product2 from "@/assets/Artboard 6.webp";
-import product3 from "@/assets/Artboard 7.webp";
 import coupeEleganceS from "@/assets/Artboard 7.webp";
 import coupeEleganceM from "@/assets/Artboard 8.webp";
 import coupeEleganceL from "@/assets/Artboard 9.webp";
@@ -78,53 +75,6 @@ export const productCategories = [
 ] as const;
 
 export const productsCatalog: ProductCatalogItem[] = [
-  // Chocolats
-  {
-    id: 1,
-    name: "Collection Classique",
-    description: "Assortiment de chocolats fins aux saveurs traditionnelles",
-    price: "À partir de 250 Dhs",
-    image: product1,
-    category: "chocolats",
-    tags: ["traditionnel", "assortiment"],
-  },
-  {
-    id: 2,
-    name: "Chocolat Noir Premium",
-    description: "Chocolat noir pur à 70% de cacao",
-    price: "180 Dhs",
-    image: product2,
-    category: "chocolats",
-    tags: ["noir", "premium"],
-  },
-  {
-    id: 3,
-    name: "Chocolat au Lait",
-    description: "Chocolat au lait crémeux et doux",
-    price: "160 Dhs",
-    image: product3,
-    category: "chocolats",
-    tags: ["lait", "crémeux"],
-  },
-  {
-    id: 4,
-    name: "Chocolat Blanc Vanille",
-    description: "Chocolat blanc à la vanille de Madagascar",
-    price: "170 Dhs",
-    image: product1,
-    category: "chocolats",
-    tags: ["blanc", "vanille"],
-  },
-  {
-    id: 5,
-    name: "Chocolat Noir Épicé",
-    description: "Chocolat noir aux épices orientales",
-    price: "190 Dhs",
-    image: product2,
-    category: "chocolats",
-    tags: ["noir", "épicé"],
-  },
-
   // Tablettes
   {
     id: 6,
